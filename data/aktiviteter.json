@@ -1,7 +1,10 @@
 {
-  "opdateret": "2026-07-24T08:00:00.000Z",
-  "periode_fra": "2026-07-27",
-  "periode_til": "2026-08-02",
-  "kilde": { "navn": "Kultunaut", "url": "https://www.kultunaut.dk" },
-  "html": "<p><i>Pladsholder — den rigtige oversigt kommer automatisk fra n8n-flowet \"Kulturkalender Greve\" hver mandag morgen.</i></p><h2>Foredrag &amp; debat</h2><h3>Greve</h3><ul><li><b>Eksempel-foredrag om lokalhistorie</b><br><i>Mandag kl. 19.00</i> - Greve Bibliotek<br>Denne tekst erstattes automatisk af rigtige arrangementer, når n8n-flowet er koblet til siden.<br><a href=\"https://www.kultunaut.dk\" target=\"_blank\" rel=\"noopener noreferrer\">Læs mere her</a></li></ul><h2>Musik &amp; koncerter</h2><h3>Greve</h3><ul><li><b>Eksempel-koncert</b><br><i>Lørdag kl. 20.00</i> - Greve Kulturhus<br>Placeholder-tekst indtil den rigtige kulturkalender kører.<br><a href=\"https://www.kultunaut.dk\" target=\"_blank\" rel=\"noopener noreferrer\">Læs mere her</a></li></ul>"
+  "opdateret": "2026-07-24T09:11:16.566Z",
+  "periode_fra": "2026-07-24",
+  "periode_til": "2026-07-30",
+  "kilde": {
+    "navn": "Kultunaut",
+    "url": "https://www.kultunaut.dk"
+  },
+  "html": ""
 }
