@@ -301,7 +301,12 @@ a{color:var(--blue)}
 .pk a{color:var(--mint);font-weight:600}
 
 /* ═══════════ Politirapport- og aktivitets-indhold (under hero'en, på almindelig sidebaggrund) ═══════════ */
-.politi, .akt{padding:34px 0 60px}
+/* Trækkes op over hero'ens underkant, ligesom .puls, så der ikke er en grå stribe imellem.
+   .politi trækkes lidt længere op end .akt, fordi dens første synlige element er datopillen
+   i .dagh, ikke selve det hvide kort — uden det ekstra ville der stå en tynd rest af hero'en. */
+.politi, .akt{padding:0 0 60px;position:relative;z-index:5}
+.politi{margin-top:-44px}
+.akt{margin-top:-38px}
 .akt .article{
   background:#fff;border-radius:16px;box-shadow:var(--lift);
   padding:30px 34px 34px;
@@ -435,7 +440,7 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   .faner{gap:8px}
   .fane-btn{font-size:.76rem;padding:13px 10px}
   .pager{grid-template-columns:1fr}
-  .politi, .akt{padding:28px 0 42px}
+  .politi, .akt{padding-bottom:42px}
   .ph{padding-bottom:32px}
   .ph h2{font-size:1.25rem}
   .sag{padding:15px 16px}
