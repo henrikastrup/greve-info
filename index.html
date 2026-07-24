@@ -286,30 +286,35 @@ a{color:var(--blue)}
 .kilde:hover{color:#fff;border-bottom-color:var(--mint)}
 .kilde svg{flex:none}
 
-/* ═══════════ Politiets døgnrapporter ═══════════ */
-.politi{background:transparent;border-top:1px solid var(--line);margin-top:0;padding:44px 0 60px}
+/* ═══════════ Politiets døgnrapporter & Aktiviteter — samme mørkeblå baggrund som hero'en ═══════════ */
+.politi, .akt{
+  background:linear-gradient(152deg,#061F30 0%,#00305F 52%,#004E9E 100%);
+  padding:44px 0 60px;
+}
 .politi .ph{margin-bottom:30px}
-.akt{background:transparent;border-top:1px solid var(--line);padding:44px 0 60px}
 .akt .ph{margin-bottom:24px}
 .akt h2{
   font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.2;
-  letter-spacing:-.015em;color:var(--navy);margin:0 0 10px;
+  letter-spacing:-.015em;color:#fff;margin:0 0 10px;
 }
 .akt .article{
   background:#fff;border-radius:16px;box-shadow:var(--lift);
   padding:30px 34px 34px;
 }
 .pe{
-  display:inline-block;font-family:var(--display);font-size:.66rem;font-weight:800;
-  letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--deep);
-  border-radius:999px;padding:6px 14px;margin-bottom:16px;
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--display);font-size:.68rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--mint);
+  background:rgba(174,234,217,.12);border:1px solid rgba(174,234,217,.28);
+  border-radius:999px;padding:7px 15px;margin-bottom:16px;
 }
 .politi h2{
   font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.2;
-  letter-spacing:-.015em;color:var(--navy);margin:0 0 10px;
+  letter-spacing:-.015em;color:#fff;margin:0 0 10px;
 }
-.pk{font-family:var(--display);font-size:.85rem;color:#4C6579;margin:0;line-height:1.6}
-.pk a{color:var(--blue);font-weight:600}
+.pk{font-family:var(--display);font-size:.85rem;color:#B9D3E4;margin:0;line-height:1.6}
+.pk a{color:var(--mint);font-weight:600}
+.politi .status, .akt .status{color:#B9D3E4}
 
 .dag{margin-bottom:26px}
 .dagh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
@@ -318,8 +323,8 @@ a{color:var(--blue)}
   text-transform:uppercase;color:var(--deep);background:#fff;
   border:1px solid #C9DAE7;border-radius:999px;padding:6px 13px;
 }
-.dagh .linje{flex:1;height:1px;background:#C9DAE7}
-.dagh a{font-family:var(--display);font-size:.72rem;font-weight:600;color:var(--blue);text-decoration:none;white-space:nowrap}
+.dagh .linje{flex:1;height:1px;background:rgba(255,255,255,.18)}
+.dagh a{font-family:var(--display);font-size:.72rem;font-weight:600;color:var(--mint);text-decoration:none;white-space:nowrap}
 .dagh a:hover{text-decoration:underline}
 
 .sag{
@@ -440,7 +445,7 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   .fane-btn{font-size:.76rem;padding:13px 10px}
   .fanebar .wrap{padding:14px 20px}
   .pager{grid-template-columns:1fr}
-  .politi{margin-top:44px;padding:38px 0 42px}
+  .politi{padding:38px 0 42px}
   .politi h2{font-size:1.25rem}
   .akt{padding:38px 0 42px}
   .akt h2{font-size:1.25rem}
@@ -872,7 +877,7 @@ async function vis(id){
       </div>
     </div>
     <div class="visning" data-visning="politi">
-      ${pol ? bygPoliti(pol, meta.uge) : `<div class="wrap"><p class="status">Ingen politirapport for uge ${meta.uge}.</p></div>`}
+      ${pol ? bygPoliti(pol, meta.uge) : `<section class="politi reveal"><div class="wrap"><p class="status">Ingen politirapport for uge ${meta.uge}.</p></div></section>`}
     </div>
     <div class="visning" data-visning="aktiviteter">
       ${bygAktiviteter(state.aktiviteter)}
