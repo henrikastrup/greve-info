@@ -288,7 +288,8 @@ a{color:var(--blue)}
 
 /* ═══════════ Politiets døgnrapporter & Aktiviteter — samme mørkeblå baggrund som hero'en ═══════════ */
 .politi, .akt{
-  background:linear-gradient(152deg,#061F30 0%,#00305F 52%,#004E9E 100%);
+  /* Faste pixel-stop i stedet for %, så farveovergangen ikke strækkes ud og udvandes på lange sider */
+  background:linear-gradient(152deg,#061F30 0px,#00305F 420px,#004E9E 820px);
   padding:44px 0 60px;
 }
 .politi .ph{margin-bottom:30px}
