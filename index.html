@@ -204,6 +204,22 @@ a{color:var(--blue)}
 }
 .chip .v{font-family:var(--display);font-size:1.02rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
 
+/* Fanepanel — skift mellem Greve Info og Politirapporten */
+.faner{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 34px}
+.fane-btn{
+  font-family:var(--display);font-weight:700;font-size:.86rem;letter-spacing:.03em;
+  padding:15px 18px;border-radius:12px;cursor:pointer;text-align:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:#B9D3E4;
+  transition:background .18s,color .18s,border-color .18s;
+}
+.fane-btn:hover{color:#fff;border-color:rgba(174,234,217,.45)}
+.fane-btn.aktiv{background:var(--mint);border-color:var(--mint);color:#06382B}
+.fane-btn .badge{
+  display:inline-block;margin-left:8px;background:rgba(255,255,255,.2);border-radius:999px;
+  padding:2px 9px;font-size:.72rem;font-variant-numeric:tabular-nums;
+}
+.fane-btn.aktiv .badge{background:rgba(6,56,43,.16)}
+
 /* Ugens bølge — aktivitet pr. dag, tegnet som kystlinje */
 .wave{position:relative;z-index:2;margin-top:6px}
 .wave svg{display:block;width:100%;height:112px}
@@ -408,6 +424,8 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   .puls{padding:22px 18px 18px;border-radius:14px}
   .bar{grid-template-columns:22px 1fr 62px;gap:10px}
   .bar .track{display:none}
+  .faner{gap:8px}
+  .fane-btn{font-size:.76rem;padding:13px 10px}
   .pager{grid-template-columns:1fr}
   .politi{margin-top:44px;padding:38px 0 42px}
   .politi h2{font-size:1.25rem}
@@ -495,7 +513,7 @@ const MDR = ["januar","februar","marts","april","maj","juni","juli","august","se
 const DAGE = ["Man","Tir","Ons","Tor","Fre","Lør","Søn"];
 /* Kilden til alt indhold i den redaktionelle del */
 const KILDE = { navn: "Greve Info", url: "https://www.facebook.com/groups/1364758780217592" };
-const state = { udgaver: [], aktiv: null };
+const state = { udgaver: [], aktiv: null, faneblad: "greve" };
 
 /* ═══════════ Vejret i Greve Strand (Open-Meteo, ingen nøgle nødvendig) ═══════════ */
 const VEJR_LAT = 55.5966, VEJR_LON = 12.2966;
@@ -794,14 +812,22 @@ async function vis(id){
         <div class="chips reveal">
           ${chips.map(c => `<div class="chip"><span class="k">${esc(c[0])}</span><span class="v">${esc(c[1])}</span></div>`).join("")}
         </div>
+        <div class="faner reveal" role="tablist" aria-label="Vælg visning">
+          <button type="button" class="fane-btn" data-fane="greve" role="tab">Greve Info</button>
+          <button type="button" class="fane-btn" data-fane="politi" role="tab">Politirapporten${pol ? `<span class="badge">${(pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)}</span>` : ""}</button>
+        </div>
       </div>
       ${bygBoelge(d.aktivitet)}
     </section>
-    <div class="wrap">
-      ${puls}
-      <div class="article reveal">${rens(d.html)}</div>
+    <div class="visning" data-visning="greve">
+      <div class="wrap">
+        ${puls}
+        <div class="article reveal">${rens(d.html)}</div>
+      </div>
     </div>
-    ${bygPoliti(pol, meta.uge)}
+    <div class="visning" data-visning="politi">
+      ${pol ? bygPoliti(pol, meta.uge) : `<div class="wrap"><p class="status">Ingen politirapport for uge ${meta.uge}.</p></div>`}
+    </div>
     <div class="wrap">
       <nav class="pager">
         ${aeldre ? `<a href="#${esc(aeldre.id)}"><span class="lbl">← Forrige uge</span><span class="ttl">Uge ${aeldre.uge}, ${aeldre.aar}</span></a>` : "<span></span>"}
@@ -812,6 +838,18 @@ async function vis(id){
   document.getElementById("topmeta").textContent = "Uge " + meta.uge + " · " + meta.aar;
   document.title = "Uge " + meta.uge + ", " + meta.aar + " · Ugen på Greve Info";
   window.scrollTo({ top: 0, behavior: "instant" });
+
+  function skiftFane(f){
+    state.faneblad = f;
+    boks.querySelectorAll(".fane-btn").forEach(b => {
+      const aktiv = b.dataset.fane === f;
+      b.classList.toggle("aktiv", aktiv);
+      b.setAttribute("aria-selected", aktiv);
+    });
+    boks.querySelectorAll(".visning").forEach(v => { v.hidden = v.dataset.visning !== f; });
+  }
+  boks.querySelectorAll(".fane-btn").forEach(b => b.onclick = () => skiftFane(b.dataset.fane));
+  skiftFane(state.faneblad);
 
   // trinvis indtoning
   boks.querySelectorAll(".reveal").forEach((el,n) => setTimeout(() => el.classList.add("in"), 70 + n * 85));
