@@ -802,6 +802,10 @@ async function vis(id){
     <section class="hero">
       <div class="ghost" aria-hidden="true">${meta.uge}</div>
       <div class="wrap">
+        <div class="faner reveal" role="tablist" aria-label="Vælg visning">
+          <button type="button" class="fane-btn" data-fane="greve" role="tab">Greve Info</button>
+          <button type="button" class="fane-btn" data-fane="politi" role="tab">Politirapporten${pol ? `<span class="badge">${(pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)}</span>` : ""}</button>
+        </div>
         <div class="eyebrow reveal"><i></i>Uge ${meta.uge} · ${meta.aar}</div>
         <h1 class="reveal">${esc(d.titel || meta.titel || "Ugen i Greve")}</h1>
         <p class="dek reveal">${esc(d.manchet || "")}</p>
@@ -811,10 +815,6 @@ async function vis(id){
         </a>
         <div class="chips reveal">
           ${chips.map(c => `<div class="chip"><span class="k">${esc(c[0])}</span><span class="v">${esc(c[1])}</span></div>`).join("")}
-        </div>
-        <div class="faner reveal" role="tablist" aria-label="Vælg visning">
-          <button type="button" class="fane-btn" data-fane="greve" role="tab">Greve Info</button>
-          <button type="button" class="fane-btn" data-fane="politi" role="tab">Politirapporten${pol ? `<span class="badge">${(pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)}</span>` : ""}</button>
         </div>
       </div>
       ${bygBoelge(d.aktivitet)}
