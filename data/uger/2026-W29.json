@@ -3,51 +3,62 @@
   "aar": 2026,
   "uge": 29,
   "maaned": 7,
-  "dato_fra": "2026-07-09",
-  "dato_til": "2026-07-15",
-  "titel": "Spejderlejr, sommerferie og en efterlyst kat",
-  "manchet": "DEMODATA — den redaktionelle del er opdigtet. Politiafsnittet er ægte.",
-  "antal_opslag": 28,
-  "top": [
-    {
-      "forfatter": "Peter",
-      "likes": 158,
-      "kommentarer": 34,
-      "url": "https://www.facebook.com/groups/1364758780217592"
-    },
-    {
-      "forfatter": "Hanne",
-      "likes": 96,
-      "kommentarer": 41,
-      "url": "https://www.facebook.com/groups/1364758780217592"
-    },
-    {
-      "forfatter": "Ove",
-      "likes": 71,
-      "kommentarer": 29,
-      "url": "https://www.facebook.com/groups/1364758780217592"
-    },
-    {
-      "forfatter": "Dorte",
-      "likes": 12,
-      "kommentarer": 47,
-      "url": "https://www.facebook.com/groups/1364758780217592"
-    }
-  ],
-  "html": "<p><em>Opdigtet demoindhold med pladsholdernavne. Afsnittet med politiets døgnrapporter nedenfor er ægte data fra politi.dk.</em></p>\n<p>Sommerferien kan ses direkte i tallene. 28 opslag mod normalt godt 40, men de opslag der kom, blev til gengæld talt grundigt igennem.</p>\n\n<h2>Fra Spejdernes Lejr</h2>\n<p><strong>Peter</strong> sendte billeder hjem fra lejren, og opslaget blev ugens mest sete. Flere forældre fulgte med i kommentarerne, og et par stykker brugte tråden til at aftale samkørsel hjem.</p>\n\n<h2>Den efterlyste kat</h2>\n<p><strong>Hanne</strong> savnede sin kat i tre døgn. Tråden voksede støt med observationer fra hele kvarteret, indtil katten dukkede op af sig selv fredag aften. Opdateringen fik næsten lige så mange reaktioner som selve efterlysningen.</p>\n\n<h2>Hjælp og hushjælp</h2>\n<p><strong>Ove</strong> tilbød at gå med en nervøs hundeejer de første par gange, og <strong>Dorte</strong> annoncerede hushjælp i Greve-området. Sidstnævnte fik en længere kommentartråd om, hvornår den slags opslag hører hjemme i gruppen — den blev afsluttet i god ro og orden.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li><strong>Peter</strong> — rapport fra Spejdernes Lejr. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Hanne</strong> — efterlyste kat, fundet igen. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Ove</strong> — tilbyder hjælp til nervøs hundeejer. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Dorte</strong> — tilbyder hushjælp i Greve. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n</ol>",
-  "aktivitet": [
-    3,
-    4,
-    3,
-    5,
-    4,
-    6,
-    3
-  ],
+  "dato_fra": "2026-07-17",
+  "dato_til": "2026-07-23",
+  "titel": "Ugens største samtaleemne: Morgentimer i mosen og omsorg for de firbenede",
+  "manchet": "74 opslag i gruppen i ugens løb.",
+  "antal_opslag": 74,
   "kilde": {
     "navn": "Greve Info",
     "url": "https://www.facebook.com/groups/1364758780217592"
   },
+  "top": [
+    {
+      "forfatter": "Susan",
+      "likes": 240,
+      "kommentarer": 16,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/"
+    },
+    {
+      "forfatter": "El-khodier",
+      "likes": 53,
+      "kommentarer": 69,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28694472796819488/"
+    },
+    {
+      "forfatter": "Katrine",
+      "likes": 89,
+      "kommentarer": 24,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/"
+    },
+    {
+      "forfatter": "Jane",
+      "likes": 81,
+      "kommentarer": 9,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28701783982755036/"
+    },
+    {
+      "forfatter": "Jane",
+      "likes": 78,
+      "kommentarer": 11,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28690722940527807/"
+    },
+    {
+      "forfatter": "Jane",
+      "likes": 73,
+      "kommentarer": 9,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28669695335963901/"
+    }
+  ],
+  "aktivitet": [
+    12,
+    9,
+    14,
+    5,
+    14,
+    9,
+    11
+  ],
   "politi": {
     "kilde": "Midt- og Vestsjællands Politi",
     "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
@@ -57,43 +68,93 @@
       "karlslunde",
       "mosede"
     ],
-    "antal_haendelser": 2,
-    "antal_anmeldelser": 1,
+    "antal_haendelser": 6,
+    "antal_anmeldelser": 3,
     "dage": [
       {
-        "dato": "14. juli 2026",
-        "iso": "2026-07-14",
-        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-14-juli-2026/2026/07/14",
-        "haendelser": [
-          {
-            "titel": "Defekt trailerwire",
-            "sted": "Mosede Landevej, Karlslunde, Greve",
-            "tid": "16.30",
-            "tekst": "Kl 16.30 skete der et færdselsuheld, da en varevogn med en 32-årig mand fra Ringsted bag rattet kørte over krydset ved Greve Landevej, hvor en trailer kom løs. Ingen kom til skade."
-          }
-        ],
-        "anmeldelser": []
-      },
-      {
-        "dato": "15. juli 2026",
-        "iso": "2026-07-15",
-        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-15-juli-2026/2026/07/15",
-        "haendelser": [
-          {
-            "titel": "Tyveri af pant",
-            "sted": "Greve",
-            "tid": "11.46",
-            "tekst": "Kl 11.46 bemærkede en mand, der var ude at løbe en tur i et villakvarter, at en mand cyklede ned ad en blind vej og ikke kom retur. Det undrede den opmærksomme løber, som anmeldte forholdet."
-          }
-        ],
+        "dato": "20. juli 2026",
+        "iso": "2026-07-20",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-20-juli-2026/2026/07/20",
         "anmeldelser": [
           {
-            "kategori": "Indbrud i villa/lejlighed/landejendom",
-            "sted": "Hundige Strandvej, Greve"
+            "kategori": "Tyveri fra køretøjer – Varebiler/lastbiler",
+            "sted": "Gersagerparken, Greve (samt et forsøg)"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Hærværk og ulovlig knallertkørsel",
+            "sted": "Lærkehegnet, Greve",
+            "tid": "17.25",
+            "tekst": "Kl 17.25 fik politiet anmeldelse om at to unge fyre kørte rundt på en knallert, der tilsyneladende var tunet så den kunne køre stærkere end tilladt. En beboer i området havde sagt til drengene, at de skulle vise mere hensyn, men det var de tilsyneladende ligeglade med. En patrulje fik fat i to drenge på 14 og 17 år. De havde forsøgt under kørslen at skjule deres udsende ved hjælp af hætter og mundbind og derfor både sigtet for at køre på ulovlig knallert og for at overtræde maskeringsforbuddet. Ydermere er det politiets vurdering, at drengene er de samme som dagen før havde knust en siderude i en parkeret patruljevogn ved Over Bølgen. Drengene blev derfor også sigtet for hærværk."
+          },
+          {
+            "titel": "Syrebomber på boldbane",
+            "sted": "Gersagerparken, Greve",
+            "tid": "18.48",
+            "tekst": "Kl 18.48 blev politiet tilkaldt til boldbanerne, hvor fire drenge skulle kaste med det, der senere viste sig at være syrebomber. Tre drenge på 9, 6 og 15 år truffet i området. Politiet fik en snak med drengene om situationen og sørgede også efterfølgende for at underrette deres familier og de sociale myndigheder."
+          }
+        ]
+      },
+      {
+        "dato": "22. juli 2026",
+        "iso": "2026-07-22",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-22-juli-2026/2026/07/22",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i fritids-/sommerhus",
+            "sted": "Brittavej, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Butikstyveri",
+            "sted": "Møllevej, Karlslunde, Greve",
+            "tid": "18.23",
+            "tekst": "Kl 18.23 standsede personalet i et supermarked en 34-årig rumænsk mand, som havde stjålet lidt madvarer. Manden blev sigtet for tyveriet og taget med til afhøring. Han erkendte og fik en straksbøde."
+          }
+        ]
+      },
+      {
+        "dato": "23. juli 2026",
+        "iso": "2026-07-23",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-23-juli-2026/2026/07/23",
+        "anmeldelser": [],
+        "haendelser": [
+          {
+            "titel": "Udsat for bedrageri",
+            "sted": "Greve",
+            "tid": "14.37",
+            "tekst": "Kl 14.37 blev det anmeldt, at en 87-årig kvinde og hendes 85-årige mand dagen før var blevet ringet op en mand, der oplyste, at han ringede fra banken. Han fik overtalt parret til at udlevere dankort og kode til en \"kollega\" der kort efter kom forbi. Der blev efterfølgende hævet 60.000 kroner ved forskellige hæveautomater."
+          },
+          {
+            "titel": "Butikstyveri",
+            "sted": "Over Bølgen, Greve",
+            "tid": "19.07",
+            "tekst": "Kl 19.07 standsede personalet en 30-årig litauisk mand, der havde stjålet en kasket og et par sandaler. Manden erkendte og blev sigtet for butikstyveri."
+          }
+        ]
+      },
+      {
+        "dato": "24. juli 2026",
+        "iso": "2026-07-24",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-24-juli-2026/2026/07/24",
+        "anmeldelser": [
+          {
+            "kategori": "Tyveri fra køretøjer – Varebiler/lastbiler",
+            "sted": "Køge Bugt Motorvejen, Karlslunde, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Muligt forsøg på bedrageri",
+            "sted": "Greve",
+            "tid": "20.02",
+            "tekst": "Kl 20.02 anmeldte en 84-årig kvinde fra Greve, at der pludseligt om eftermiddagen havde stået et ukendt par inde i hendes hus. De havde oplyst, at de kom fra kommunen og var der for at se til kvindens velbefindende. Den mandlige del af parret gik pludseligt ind i et andet værelse, hvilket den 84-årige forsøgte at tale ham fra. Den ukendte kvinde forsøgte imens at holde den 84-årige ude på badeværelset. Parret forlod til sidst stedet. Det kan ikke afvises, at de har været på adressen i et forsøg på at stjæle, men de fik tilsyneladende intet med sig. Parret beskrives som: Mand: 180 cm høj, almindelig af bygning, vejrbidt i ansigtet, lys i huden og med kommunefarvet kort hår. Han var iført lange bukser, blazerjakke og talte flydende dansk. Kvinde: 170 cm høj, kraftig af bygning, mørk i huden og med mørkt hår. Hun bar et hvidt tørklæde og hvid kittel og hvide bukser og talte dansk med accent."
           }
         ]
       }
     ]
   },
-  "demo": true
+  "html": "<h2>Ugens største samtaleemne: Morgentimer i mosen og omsorg for de firbenede</h2>\n<p>Hvis der er én ting, der har samlet gruppen i den forgangne uge, er det en skøn blanding af naturskønne glimt fra lokalområdet og en dybfølt kærlighed til vores kæledyr. Særligt ét medlem har taget os med på en næsten daglig visuel rejse gennem det skiftende danske sommervejr, mens andre opslag har mindet os om det stærke nærvær og den hjælpsomhed, der findes på kryds og tværs af villavejene.</p>\n\n<h2>Solskinstimer, fiskehejrer og glemte regnjakker</h2>\n<p>Det har været svært at åbne gruppen i denne uge uden at falde over <strong>Jane</strong>s beretninger. Med sine tidlige morgenture i mosen har hun leveret den ene stemningsfulde opdatering efter den anden. Gruppen har kunnet følge med i alt fra stille, solrige morgener til pludselige regnbyger, hvor regnbuen godt nok var flot, men hvor regnjakken desværre hang tørt og godt derhjemme på knagen.</p>\n<p><strong>Jane</strong> har talt \"speedy-ællinger\", spejdet efter fiskehejrer ved deres gamle redeplads og holdt øje med ræven. Opslagene har fængslet mange, formentlig fordi de fungerer som en tiltrængt og rolig pause i hverdagen, hvor man lige kan nyde Greves smukke natur før arbejdsdagen går i gang.</p>\n\n<h2>En bølge af kærlighed til hunden</h2>\n<p>Menneskets bedste ven har også haft en hovedrolle i ugen der gik. Ugens absolut mest populære opslag stod <strong>Susan</strong> for. Hun rørte mange hjerter og fik over 240 reaktioner, då hun delte et billede af en sød tegning og personlig hilsen, som Dyrlægerne ved stranden havde lavet af hendes hund. Det viste om noget, at god, lokal omsorg gør en forskel.</p>\n<p>Hundeemnet har generelt fyldt i kommentarsporene. <strong>El-khodier</strong> efterlyste gode råd til hundepasning i ferien, hvilket hurtigt skabte masser af engagement og anbefalinger. <strong>Lissi</strong> råbte vagt i gevær efter at have haft besøg af en skræmt, løs hund i haven, og <strong>Keld</strong> udviste ægte overskud, da han efter en gåtur i Greve Skov tilbød sin hjælp og erfaring til en ung mand og en Labrador, der begge virkede lidt nervøse under turen.</p>\n\n<h2>Hjælpsomme naboer og unge kræfter</h2>\n<p>Lokalånden fejler bestemt ingenting, når uheldet fanger. <strong>David</strong> sendte en varm tak ud i gruppen til en ukendt, sød dame, som hurtigt trådte til med trøst og plaster, da hans søn var styrtet på cykel. Det er netop den slags hverdagshjælp, der gør det trygt at bo i byen.</p>\n<p>Der er også masser af initiativ blandt de yngre borgere. 12-årige <strong>Tristan</strong> bød sig til med et beundringsværdigt sommerferie-tilbud om at gå tur med hunde, handle eller hjælpe til i haven for at tjene lidt lommepenge. Og på børneområdet kunne <strong>Katrine</strong> fortælle, at hun starter op som privat børnepasser til september og søger små legekammerater til sin egen datter.</p>\n\n<h2>Ren natur og kommunale drøftelser</h2>\n<p>Desværre byder ugen ikke altid kun på solstrålehistorier. <strong>Megan</strong> delte et billede fra naturlegepladsen ved Hundige Strand, hvor fugle havde spredt affald fra en efterladt pose ud over det hele — på trods af, at der stod en næsten tom skraldespand blot 100 meter derfra. Opslaget tjente som en god påmindelse til os alle om at passe på vores fælles åndehuller.</p>\n\n<p>Endelig var der også plads til en debatterende vinkel på det kommunale område. <strong>Rune</strong> rejste en principiel drøftelse vedrørende kommunens sagsbehandling, partshøringer og nye vurderinger i en sag, der er indbragt for Ankestyrelsen, hvilket skabte opmærksomhed omkring borgernes rettigheder og forvaltningsskik.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li><strong>Susan</strong>: En fin hilsen og tegning fra dyrlægen <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/\">Læs opslaget</a></li>\n  <li><strong>El-khodier</strong>: Efterlysning af hundepasning i ferien <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28694472796819488/\">Læs opslaget</a></li>\n  <li><strong>Katrine</strong>: Ny privat børnepasser starter op <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/\">Læs opslaget</a></li>\n  <li><strong>Jane</strong>: Tirsdag morgen i mosen <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28701783982755036/\">Læs opslaget</a></li>\n  <li><strong>Jane</strong>: Kold sommermorgen og fiskehejrer <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28690722940527807/\">Læs opslaget</a></li>\n  <li><strong>Jane</strong>: Lørdagsmorgen, speedy-ællinger og våd jord <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28669695335963901/\">Læs opslaget</a></li>\n  <li><strong>Jane</strong>: Fredelig onsdag morgen i mosen <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28714403948159706/\">Læs opslaget</a></li>\n  <li><strong>Jane</strong>: Regnbue, skylle og den glemte regnjakke <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28726330510300383/\">Læs opslaget</a></li>\n  <li><strong>Jane</strong>: Søndag morgen med fiskehejre og ræv <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28680777168189051/\">Læs opslaget</a></li>\n  <li><strong>David</strong>: Tak til den søde dame efter cykelstyrt <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28705168209083280/\">Læs opslaget</a></li>\n  <li><strong>Tristan</strong>: 12-årig tilbyder hjælp i sommerferien <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28652952530971515/\">Læs opslaget</a></li>\n  <li><strong>Lissi</strong>: Skræmt hund på besøg i haven <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28675909515342483/\">Læs opslaget</a></li>\n  <li><strong>Keld</strong>: Tilbud om hundehjælp efter møde i skoven <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28702235962709838/\">Læs opslaget</a></li>\n  <li><strong>Rune</strong>: Debat om kommunens sagsbehandling og klagesag <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28665869169679851/\">Læs opslaget</a></li>\n  <li><strong>Megan</strong>: Bøn om at passe på naturlegepladsen ved stranden <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28684201927846575/\">Læs opslaget</a></li>\n</ol>"
 }
