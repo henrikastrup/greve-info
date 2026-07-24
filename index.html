@@ -205,7 +205,9 @@ a{color:var(--blue)}
 .chip .v{font-family:var(--display);font-size:1.02rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
 
 /* Fanepanel — skift mellem Greve Info og Politirapporten */
-.faner{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 34px}
+.fanebar{background:linear-gradient(90deg,#072335,#0A2C41);border-bottom:1px solid rgba(174,234,217,.14)}
+.fanebar .wrap{padding:16px 32px}
+.faner{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}
 .fane-btn{
   font-family:var(--display);font-weight:700;font-size:.86rem;letter-spacing:.03em;
   padding:15px 18px;border-radius:12px;cursor:pointer;text-align:center;
@@ -426,6 +428,7 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   .bar .track{display:none}
   .faner{gap:8px}
   .fane-btn{font-size:.76rem;padding:13px 10px}
+  .fanebar .wrap{padding:14px 20px}
   .pager{grid-template-columns:1fr}
   .politi{margin-top:44px;padding:38px 0 42px}
   .politi h2{font-size:1.25rem}
@@ -799,27 +802,31 @@ async function vis(id){
   }
 
   boks.innerHTML = `
-    <section class="hero">
-      <div class="ghost" aria-hidden="true">${meta.uge}</div>
+    <div class="fanebar">
       <div class="wrap">
         <div class="faner reveal" role="tablist" aria-label="Vælg visning">
           <button type="button" class="fane-btn" data-fane="greve" role="tab">Greve Info</button>
           <button type="button" class="fane-btn" data-fane="politi" role="tab">Politirapporten${pol ? `<span class="badge">${(pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)}</span>` : ""}</button>
         </div>
-        <div class="eyebrow reveal"><i></i>Uge ${meta.uge} · ${meta.aar}</div>
-        <h1 class="reveal">${esc(d.titel || meta.titel || "Ugen i Greve")}</h1>
-        <p class="dek reveal">${esc(d.manchet || "")}</p>
-        <a class="kilde reveal" href="${esc(kilde.url)}" target="_blank" rel="noopener noreferrer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l.5-3.5H13V7.2c0-1 .3-1.7 1.7-1.7H17V2.4A24 24 0 0 0 14.6 2C12 2 10.2 3.6 10.2 6.5v3H7V13h3.2v9H13z"/></svg>
-          Kilde: Facebook-gruppen <b>${esc(kilde.navn)}</b> ↗
-        </a>
-        <div class="chips reveal">
-          ${chips.map(c => `<div class="chip"><span class="k">${esc(c[0])}</span><span class="v">${esc(c[1])}</span></div>`).join("")}
-        </div>
       </div>
-      ${bygBoelge(d.aktivitet)}
-    </section>
+    </div>
     <div class="visning" data-visning="greve">
+      <section class="hero">
+        <div class="ghost" aria-hidden="true">${meta.uge}</div>
+        <div class="wrap">
+          <div class="eyebrow reveal"><i></i>Uge ${meta.uge} · ${meta.aar}</div>
+          <h1 class="reveal">${esc(d.titel || meta.titel || "Ugen i Greve")}</h1>
+          <p class="dek reveal">${esc(d.manchet || "")}</p>
+          <a class="kilde reveal" href="${esc(kilde.url)}" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l.5-3.5H13V7.2c0-1 .3-1.7 1.7-1.7H17V2.4A24 24 0 0 0 14.6 2C12 2 10.2 3.6 10.2 6.5v3H7V13h3.2v9H13z"/></svg>
+            Kilde: Facebook-gruppen <b>${esc(kilde.navn)}</b> ↗
+          </a>
+          <div class="chips reveal">
+            ${chips.map(c => `<div class="chip"><span class="k">${esc(c[0])}</span><span class="v">${esc(c[1])}</span></div>`).join("")}
+          </div>
+        </div>
+        ${bygBoelge(d.aktivitet)}
+      </section>
       <div class="wrap">
         ${puls}
         <div class="article reveal">${rens(d.html)}</div>
