@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ugen på Greve Info</title>
+<meta name="description" content="Ugentligt sammendrag af de mest omtalte opslag i Facebook-gruppen for Greve.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#072335">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Greve Kommunes palette, aflæst fra greve.dk */
+  --navy:#072335;
+  --deep:#002F60;
+  --blue:#004996;
+  --blue-lit:#0A6FD1;
+  --sky:#E4EDF4;
+  --mint:#AEEAD9;
+  --mint-deep:#4FBFA0;
+  --paper:#F4F6F8;
+  --green:#115F27;
+  --sand:#E5CE91;
+  --ink:#15242F;
+  --muted:#61748A;
+  --line:#DFE7EE;
+
+  --rail:290px;
+  --display:"Exo 2",system-ui,sans-serif;
+  --text:"Newsreader",Georgia,serif;
+  --lift:0 22px 60px -30px rgba(7,35,53,.55);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--text);font-size:18px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--mint-deep);outline-offset:3px;border-radius:3px}
+
+.reveal{opacity:0;transform:translateY(16px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+
+/* ═══════════ Topbånd ═══════════ */
+.topbar{
+  position:sticky;top:0;z-index:60;height:64px;
+  display:flex;align-items:center;gap:14px;padding:0 24px;
+  background:rgba(7,35,53,.88);backdrop-filter:blur(14px);
+  color:#fff;border-bottom:1px solid rgba(174,234,217,.16);
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand b{
+  font-family:var(--display);font-weight:800;font-size:1.02rem;
+  letter-spacing:.07em;text-transform:uppercase;line-height:1;
+}
+.brand b span{font-weight:400;color:var(--mint)}
+.topbar .spacer{flex:1}
+.pill{
+  font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mint);
+  border:1px solid rgba(174,234,217,.32);border-radius:999px;padding:6px 13px;
+}
+.railbtn{
+  display:none;background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;
+  font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;
+}
+
+.shell{display:grid;grid-template-columns:var(--rail) minmax(0,1fr)}
+
+/* ═══════════ Arkivskinne ═══════════ */
+.rail{
+  background:linear-gradient(180deg,#072335 0%,#0A2C41 100%);
+  border-right:1px solid rgba(174,234,217,.12);
+}
+.rail-inner{position:sticky;top:64px;max-height:calc(100vh - 64px);overflow-y:auto;padding:26px 18px 44px}
+.rail-inner::-webkit-scrollbar{width:6px}
+.rail-inner::-webkit-scrollbar-thumb{background:#1E4A66;border-radius:3px}
+
+.rail h2{
+  font-family:var(--display);font-size:.66rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--mint);margin:0 0 16px;
+}
+.rail input[type=search]{
+  width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(174,234,217,.18);
+  color:#fff;font-family:var(--display);font-size:.82rem;padding:10px 13px;
+  border-radius:999px;margin-bottom:8px;
+}
+.rail input[type=search]::placeholder{color:#7C97AC}
+.rail input[type=search]:focus{background:rgba(255,255,255,.1);outline:none;border-color:var(--mint-deep)}
+.nyeste{
+  display:none;width:100%;margin-bottom:16px;cursor:pointer;
+  background:var(--mint);color:#06382B;border:0;border-radius:999px;padding:9px 14px;
+  font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.nyeste.vis{display:block}
+
+.yr{margin-bottom:2px}
+.yr > button{
+  width:100%;display:flex;align-items:center;gap:10px;padding:10px 6px;
+  background:transparent;border:0;color:#fff;cursor:pointer;text-align:left;
+  font-family:var(--display);font-weight:700;font-size:1.06rem;letter-spacing:.02em;
+}
+.yr > button .n{
+  margin-left:auto;font-size:.63rem;font-weight:600;letter-spacing:.08em;color:var(--mint);
+  background:rgba(174,234,217,.12);border-radius:999px;padding:3px 9px;
+}
+.caret{flex:none;transition:transform .25s cubic-bezier(.3,.8,.3,1)}
+.open > button > .caret{transform:rotate(90deg)}
+
+.months{display:none;padding-left:8px;margin-left:9px;border-left:1px solid rgba(174,234,217,.16)}
+.open > .months{display:block}
+.mo > button{
+  width:100%;display:flex;align-items:center;gap:9px;padding:8px 6px;
+  background:transparent;border:0;color:#9FB8CB;cursor:pointer;text-align:left;
+  font-family:var(--display);font-weight:600;font-size:.76rem;
+  letter-spacing:.14em;text-transform:uppercase;transition:color .15s;
+}
+.mo > button:hover{color:#fff}
+.weeks{display:none;padding:2px 0 10px}
+.mo.open > .weeks{display:block}
+
+.wk{
+  position:relative;display:flex;align-items:center;gap:10px;width:100%;
+  background:transparent;border:0;color:#C4D6E3;cursor:pointer;text-align:left;
+  padding:9px 12px;margin-bottom:2px;border-radius:9px;
+  font-family:var(--display);font-size:.84rem;line-height:1.3;
+  transition:background .15s,color .15s;
+}
+.wk:hover{background:rgba(255,255,255,.07);color:#fff}
+.wk .num{font-weight:700;color:#fff;flex:none;font-variant-numeric:tabular-nums}
+.wk .dt{font-size:.7rem;color:#7C97AC;margin-left:auto;flex:none}
+.wk[aria-current="true"]{background:linear-gradient(90deg,rgba(174,234,217,.2),rgba(174,234,217,.04));color:#fff}
+.wk[aria-current="true"]::before{
+  content:"";position:absolute;left:0;top:9px;bottom:9px;width:3px;
+  background:var(--mint);border-radius:0 3px 3px 0;
+}
+.wk[aria-current="true"] .num{color:var(--mint)}
+.tom{font-family:var(--display);font-size:.8rem;color:#7C97AC;padding:10px 6px}
+
+/* ═══════════ Hero ═══════════ */
+.main{min-width:0;padding-bottom:0}
+.wrap{max-width:790px;margin:0 auto;padding:0 32px}
+
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(152deg,#061F30 0%,#00305F 52%,#004E9E 100%);
+  padding:70px 0 0;
+}
+.hero::after{
+  content:"";position:absolute;top:-180px;right:-140px;width:520px;height:520px;
+  background:radial-gradient(circle,rgba(174,234,217,.20),transparent 65%);pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:3}
+.ghost{
+  position:absolute;right:20px;top:-34px;z-index:1;pointer-events:none;user-select:none;
+  font-family:var(--display);font-weight:800;font-size:17rem;line-height:.78;
+  color:transparent;-webkit-text-stroke:2px rgba(174,234,217,.24);letter-spacing:-.04em;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;
+  font-family:var(--display);font-size:.68rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--mint);
+  background:rgba(174,234,217,.12);border:1px solid rgba(174,234,217,.28);
+  border-radius:999px;padding:7px 15px;
+}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--mint);display:block}
+.hero h1{
+  font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.4vw,3rem);
+  line-height:1.08;letter-spacing:-.025em;margin:0 0 18px;max-width:17ch;
+}
+.dek{font-size:1.12rem;line-height:1.6;color:#B9D3E4;margin:0 0 30px;max-width:50ch;font-style:italic}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+  border-radius:11px;padding:11px 16px;backdrop-filter:blur(6px);
+}
+.chip .k{
+  display:block;font-family:var(--display);font-size:.6rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:#8FB3CC;margin-bottom:3px;
+}
+.chip .v{font-family:var(--display);font-size:1.02rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+
+/* Ugens bølge — aktivitet pr. dag, tegnet som kystlinje */
+.wave{position:relative;z-index:2;margin-top:6px}
+.wave svg{display:block;width:100%;height:112px}
+.wave .dage{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  max-width:790px;margin:0 auto;padding:0 32px 56px;
+}
+.wave .dage span{
+  font-family:var(--display);font-size:.62rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:#7FA3BC;text-align:center;
+}
+.wave .dage span b{display:block;color:var(--mint);font-size:.78rem;font-weight:700;margin-top:2px}
+.wave .dage span.top b{color:#fff}
+
+/* ═══════════ Ugens puls ═══════════ */
+.puls{
+  position:relative;z-index:5;margin:-38px auto 46px;background:#fff;
+  border-radius:18px;box-shadow:var(--lift);padding:28px 30px 24px;
+}
+.puls-hd{display:flex;align-items:baseline;gap:12px;margin-bottom:22px}
+.puls h3{
+  font-family:var(--display);font-size:.68rem;font-weight:800;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--navy);margin:0;
+}
+.puls .sub{font-family:var(--display);font-size:.76rem;color:var(--muted);margin:0}
+.bar{
+  display:grid;grid-template-columns:26px 150px 1fr 78px;gap:14px;align-items:center;
+  text-decoration:none;padding:8px 10px;margin:0 -10px;border-radius:10px;transition:background .15s;
+}
+.bar:hover{background:#F3F7FB}
+.bar .rk{
+  font-family:var(--display);font-size:.68rem;font-weight:700;color:var(--muted);
+  text-align:center;font-variant-numeric:tabular-nums;
+}
+.bar:first-of-type .rk{
+  background:var(--navy);color:var(--mint);border-radius:6px;padding:3px 0;
+}
+.bar .who{
+  font-family:var(--display);font-size:.83rem;font-weight:600;color:var(--navy);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.bar:hover .who{color:var(--blue)}
+.bar .track{background:#E9F0F6;height:10px;border-radius:999px;overflow:hidden}
+.bar .fill{
+  display:block;height:100%;width:0;border-radius:999px;
+  background:linear-gradient(90deg,var(--blue),var(--blue-lit));
+  transition:width 1s cubic-bezier(.2,.7,.3,1);
+}
+.bar:first-of-type .fill{background:linear-gradient(90deg,var(--blue),var(--mint-deep))}
+.bar .val{
+  font-family:var(--display);font-size:.71rem;color:var(--muted);text-align:right;
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+
+/* Kildeangivelse i hero */
+.kilde{
+  display:inline-flex;align-items:center;gap:8px;margin:0 0 30px;
+  font-family:var(--display);font-size:.8rem;color:#A9C8DC;text-decoration:none;
+  border-bottom:1px solid rgba(174,234,217,.35);padding-bottom:3px;
+}
+.kilde b{color:#fff;font-weight:600}
+.kilde:hover{color:#fff;border-bottom-color:var(--mint)}
+.kilde svg{flex:none}
+
+/* ═══════════ Politiets døgnrapporter ═══════════ */
+.politi{background:var(--sky);border-top:1px solid #CBDCE9;margin-top:70px;padding:56px 0 60px}
+.politi .ph{margin-bottom:30px}
+.pe{
+  display:inline-block;font-family:var(--display);font-size:.66rem;font-weight:800;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--deep);
+  border-radius:999px;padding:6px 14px;margin-bottom:16px;
+}
+.politi h2{
+  font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.2;
+  letter-spacing:-.015em;color:var(--navy);margin:0 0 10px;
+}
+.pk{font-family:var(--display);font-size:.85rem;color:#4C6579;margin:0;line-height:1.6}
+.pk a{color:var(--blue);font-weight:600}
+
+.dag{margin-bottom:26px}
+.dagh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.datopil{
+  font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--deep);background:#fff;
+  border:1px solid #C9DAE7;border-radius:999px;padding:6px 13px;
+}
+.dagh .linje{flex:1;height:1px;background:#C9DAE7}
+.dagh a{font-family:var(--display);font-size:.72rem;font-weight:600;color:var(--blue);text-decoration:none;white-space:nowrap}
+.dagh a:hover{text-decoration:underline}
+
+.sag{
+  background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:9px;
+  border-left:3px solid var(--deep);
+}
+.sag .rk{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-bottom:7px}
+.sag .tid{
+  font-family:var(--display);font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--deep);border-radius:5px;padding:2px 8px;font-variant-numeric:tabular-nums;
+}
+.sag h4{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--navy);margin:0}
+.sag .sted{font-family:var(--display);font-size:.78rem;color:var(--muted)}
+.sag p{margin:0;font-size:.97rem;line-height:1.6;color:#2B3D4B}
+
+.anm{background:#fff;border-radius:12px;padding:16px 20px;border-left:3px solid var(--sand)}
+.anm h5{
+  font-family:var(--display);font-size:.66rem;font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 9px;
+}
+.anm ul{margin:0;padding:0;list-style:none}
+.anm li{
+  font-family:var(--display);font-size:.86rem;color:var(--navy);
+  padding:7px 0;border-top:1px solid #EDF2F7;
+}
+.anm li:first-child{border-top:0}
+.anm li span{
+  display:block;font-size:.63rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:2px;
+}
+.politi .ingen{
+  background:#fff;border-radius:12px;padding:22px;font-family:var(--display);
+  font-size:.9rem;color:var(--muted);text-align:center;
+}
+
+/* ═══════════ Artikel ═══════════ */
+.article{font-size:1.09rem;color:#22323F}
+.article h2{
+  font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1.22;
+  letter-spacing:-.015em;color:var(--navy);margin:2.6em 0 .55em;
+}
+.article h2::before{
+  content:"";display:block;width:34px;height:3px;border-radius:2px;margin-bottom:14px;
+  background:linear-gradient(90deg,var(--blue),var(--mint-deep));
+}
+.article h3{
+  font-family:var(--display);font-weight:600;font-size:1.12rem;color:var(--deep);margin:2.1em 0 .45em;
+}
+.article p{margin:0 0 1.2em}
+.article strong{font-weight:600;color:var(--navy)}
+.article a{color:var(--blue);text-underline-offset:3px;text-decoration-thickness:1px}
+.article a:hover{color:var(--blue-lit)}
+.article ul{padding-left:1.3em;margin:0 0 1.3em}
+.article li{margin-bottom:.5em}
+.article hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+
+/* Linklisten som kort */
+.article ol{counter-reset:l;list-style:none;padding:0;margin:0 0 1.5em;display:grid;gap:10px}
+.article ol > li{
+  counter-increment:l;position:relative;margin:0;padding:16px 42px 16px 58px;
+  background:#fff;border:1px solid var(--line);border-radius:13px;
+  font-size:.98rem;line-height:1.55;
+  transition:border-color .18s,transform .18s,box-shadow .18s;
+}
+.article ol > li::before{
+  content:counter(l,decimal-leading-zero);position:absolute;left:16px;top:16px;
+  width:28px;height:28px;display:grid;place-items:center;border-radius:8px;
+  background:var(--sky);color:var(--blue);
+  font-family:var(--display);font-size:.72rem;font-weight:700;
+}
+.article ol > li::after{
+  content:"↗";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  color:var(--muted);font-size:.9rem;transition:color .18s,transform .18s;
+}
+.article ol > li:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 12px 28px -18px rgba(7,35,53,.5)}
+.article ol > li:hover::after{color:var(--blue);transform:translateY(-50%) translateX(3px)}
+.article ol > li:hover::before{background:var(--blue);color:#fff}
+
+/* ═══════════ Bladring ═══════════ */
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:60px 0 90px}
+.pager a{
+  text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;transition:border-color .18s,transform .18s,box-shadow .18s;
+}
+.pager a:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 14px 32px -20px rgba(7,35,53,.5)}
+.pager .lbl{
+  display:block;font-family:var(--display);font-size:.63rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--mint-deep);margin-bottom:7px;
+}
+.pager .ttl{font-family:var(--display);font-size:.98rem;font-weight:600;color:var(--navy);line-height:1.3}
+.pager .next{text-align:right;grid-column:2}
+
+.status{padding:90px 32px;text-align:center;color:var(--muted);font-family:var(--display);font-size:.95rem}
+
+/* ═══════════ Footer ═══════════ */
+footer{background:var(--navy);color:#A9C1D3;font-family:var(--display);font-size:.8rem;line-height:1.7}
+footer svg{display:block;width:100%;height:56px}
+footer .inner{max-width:790px;margin:0 auto;padding:6px 32px 40px}
+footer strong{color:#fff;font-weight:600}
+footer .kilder{margin:14px 0 0;padding-left:14px;border-left:2px solid var(--mint)}
+footer .kilder p{margin:0 0 7px}
+footer .kilder a{color:var(--mint)}
+footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
+
+@media (max-width:920px){
+  .shell{grid-template-columns:1fr}
+  .rail{display:none}
+  .rail.vis{display:block}
+  .rail-inner{position:static;max-height:none}
+  .railbtn{display:block}
+  .ghost{font-size:8.5rem;top:-14px;right:10px;-webkit-text-stroke-width:1.5px}
+  .hero{padding-top:44px}
+  .wrap,.wave .dage,footer .inner{padding-left:20px;padding-right:20px}
+  .puls{padding:22px 18px 18px;border-radius:14px}
+  .bar{grid-template-columns:22px 1fr 62px;gap:10px}
+  .bar .track{display:none}
+  .pager{grid-template-columns:1fr}
+  .politi{margin-top:44px;padding:38px 0 42px}
+  .politi h2{font-size:1.25rem}
+  .sag{padding:15px 16px}
+  .pager .next{grid-column:1;text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#">
+    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="9" r="4.4" fill="#AEEAD9"/>
+      <path d="M3 20.5c3.4 0 3.4-3.2 6.9-3.2s3.5 3.2 6.9 3.2 3.4-3.2 6.9-3.2 3.5 3.2 6.9 3.2" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M3 26c3.4 0 3.4-3.2 6.9-3.2s3.5 3.2 6.9 3.2 3.4-3.2 6.9-3.2 3.5 3.2 6.9 3.2" fill="none" stroke="#AEEAD9" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+    </svg>
+    <b>Ugen på <span>Greve Info</span></b>
+  </a>
+  <div class="spacer"></div>
+  <div class="pill" id="topmeta"></div>
+  <button class="railbtn" id="railbtn" aria-expanded="false" aria-controls="rail">Arkiv</button>
+</header>
+
+<div class="shell">
+
+  <nav class="rail" id="rail" aria-label="Arkiv">
+    <div class="rail-inner">
+      <h2>Arkiv</h2>
+      <input type="search" id="filter" placeholder="Søg i ugerne…" aria-label="Søg i arkivet">
+      <button class="nyeste" id="nyeste" type="button">↑ Gå til nyeste uge</button>
+      <div id="tree"><p class="tom">Henter arkiv…</p></div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div id="udgave"><p class="status">Henter ugens udgave…</p></div>
+  </main>
+
+</div>
+
+<footer>
+  <svg viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 40C150 40 150 12 300 12s150 28 300 28 150-28 300-28 150 28 300 28v16H0z" fill="#0A2C41"/>
+    <path d="M0 46C150 46 150 22 300 22s150 24 300 24 150-24 300-24 150 24 300 24v10H0z" fill="#072335"/>
+  </svg>
+  <div class="inner">
+    <strong>Ugen på Greve Info</strong> — automatisk ugesammendrag. Ny udgave hver torsdag morgen.
+    <div class="kilder">
+      <p><strong>Kilde til den redaktionelle del:</strong> Facebook-gruppen
+        <a href="https://www.facebook.com/groups/1364758780217592" target="_blank" rel="noopener noreferrer">Greve Info</a>.
+        Opslagene er skrevet af gruppens medlemmer og gengives kun med fornavn.</p>
+      <p><strong>Kilde til politistoffet:</strong>
+        <a href="https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi" target="_blank" rel="noopener noreferrer">Midt- og Vestsjællands Politis døgnrapporter</a>.
+        Uddragene er gengivet ordret og omfatter kun hændelser i Greve, Hundige, Karlslunde og Mosede.</p>
+    </div>
+    <div class="fine">
+      Privat, ikke-kommerciel side. Ikke tilknyttet Greve Kommune, Greve Info eller politiet, og ikke en officiel informationskanal.
+      Alt indhold tilhører de oprindelige forfattere — brug linkene for at læse originalen.
+    </div>
+  </div>
+</footer>
+
+<script>
+const MDR = ["januar","februar","marts","april","maj","juni","juli","august","september","oktober","november","december"];
+const DAGE = ["Man","Tir","Ons","Tor","Fre","Lør","Søn"];
+/* Kilden til alt indhold i den redaktionelle del */
+const KILDE = { navn: "Greve Info", url: "https://www.facebook.com/groups/1364758780217592" };
+const state = { udgaver: [], aktiv: null };
+
+/* Rensning af HTML, så indhold fra Facebook ikke kan køre kode */
+function rens(html){
+  const t = document.createElement("template");
+  t.innerHTML = html || "";
+  t.content.querySelectorAll("script,style,iframe,object,embed,link,meta,form,input,button").forEach(e => e.remove());
+  t.content.querySelectorAll("*").forEach(el => {
+    [...el.attributes].forEach(a => {
+      const n = a.name.toLowerCase(), v = (a.value || "").trim().toLowerCase();
+      if (n.startsWith("on")) el.removeAttribute(a.name);
+      else if ((n === "href" || n === "src") && !/^(https?:|mailto:|#|\/)/.test(v)) el.removeAttribute(a.name);
+      else if (n === "style") el.removeAttribute(a.name);
+    });
+    if (el.tagName === "A") { el.target = "_blank"; el.rel = "noopener noreferrer nofollow"; }
+  });
+  return t.innerHTML;
+}
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function kortDato(iso){
+  const d = new Date(iso + "T00:00:00");
+  return isNaN(d) ? "" : d.getDate() + ". " + MDR[d.getMonth()].slice(0,3);
+}
+function periode(u){
+  if (!u.dato_fra || !u.dato_til) return "";
+  const a = new Date(u.dato_fra + "T00:00:00"), b = new Date(u.dato_til + "T00:00:00");
+  if (isNaN(a) || isNaN(b)) return "";
+  return a.getDate() + (a.getMonth() === b.getMonth() ? "." : ". " + MDR[a.getMonth()]) +
+         "–" + b.getDate() + ". " + MDR[b.getMonth()];
+}
+const maanedAf = u => (u.maaned ? u.maaned - 1 : new Date(u.dato_fra + "T00:00:00").getMonth());
+
+/* Blød kurve gennem punkter (Catmull-Rom → bezier) */
+function kurve(pts){
+  let d = `M${pts[0][0]},${pts[0][1]}`;
+  for (let i = 0; i < pts.length - 1; i++){
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    d += ` C${p1[0] + (p2[0] - p0[0]) / 6},${p1[1] + (p2[1] - p0[1]) / 6}` +
+         ` ${p2[0] - (p3[0] - p1[0]) / 6},${p2[1] - (p3[1] - p1[1]) / 6}` +
+         ` ${p2[0]},${p2[1]}`;
+  }
+  return d;
+}
+
+function bygBoelge(aktivitet){
+  const data = (Array.isArray(aktivitet) && aktivitet.length === 7) ? aktivitet : null;
+  const v = data || [4,6,5,8,6,9,5];
+  const max = Math.max(...v, 1);
+  const W = 1200, H = 112;
+  const pts = v.map((n,i) => [i * (W / 6), 92 - (n / max) * 66]);
+  const linje = kurve(pts);
+  const flade = linje + ` L${W},${H} L0,${H} Z`;
+  const topIdx = v.indexOf(max);
+
+  const dage = data ? `<div class="dage">${DAGE.map((d,i) =>
+      `<span class="${i === topIdx ? "top" : ""}">${d}<b>${v[i]}</b></span>`).join("")}</div>` : "";
+
+  return `<div class="wave">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#AEEAD9" stop-opacity=".30"/>
+          <stop offset="100%" stop-color="#AEEAD9" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="${flade}" fill="url(#wg)"/>
+      <path d="${linje}" fill="none" stroke="#AEEAD9" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      ${data ? pts.map((p,i) => `<circle cx="${p[0]}" cy="${p[1]}" r="${i === topIdx ? 5 : 3.4}" fill="${i === topIdx ? "#fff" : "#AEEAD9"}"/>`).join("") : ""}
+    </svg>
+    ${dage}
+  </div>`;
+}
+
+/* ═══════════ Politiets døgnrapporter ═══════════ */
+function bygPoliti(p, uge){
+  if (!p) return "";
+  const omraade = (p.filter || ["greve","hundige","karlslunde","mosede"])
+    .map(s => s.charAt(0).toUpperCase() + s.slice(1));
+  const omraadeTekst = omraade.slice(0,-1).join(", ") + " og " + omraade[omraade.length-1];
+  const dage = Array.isArray(p.dage) ? p.dage : [];
+
+  const krop = dage.length ? dage.map(d => `
+    <div class="dag">
+      <div class="dagh">
+        <span class="datopil">${esc(d.dato)}</span>
+        <span class="linje"></span>
+        ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">Hele rapporten ↗</a>` : ""}
+      </div>
+      ${(d.haendelser || []).map(h => `
+        <article class="sag">
+          <div class="rk">
+            ${h.tid ? `<span class="tid">${esc(h.tid)}</span>` : ""}
+            <h4>${esc(h.titel)}</h4>
+            <span class="sted">${esc(h.sted)}</span>
+          </div>
+          <p>${esc(h.tekst)}</p>
+        </article>`).join("")}
+      ${(d.anmeldelser || []).length ? `
+        <div class="anm">
+          <h5>Anmeldte indbrud og tyverier</h5>
+          <ul>${d.anmeldelser.map(a => `<li><span>${esc(a.kategori)}</span>${esc(a.sted)}</li>`).join("")}</ul>
+        </div>` : ""}
+    </div>`).join("")
+    : `<p class="ingen">Der var ingen hændelser fra ${omraadeTekst} i ugens døgnrapporter.</p>`;
+
+  return `<section class="politi reveal">
+    <div class="wrap">
+      <div class="ph">
+        <span class="pe">Fra politiets døgnrapporter</span>
+        <h2>Uge ${uge} i ${omraadeTekst}</h2>
+        <p class="pk">
+          Uddrag af ${esc(p.kilde || "politiets")} døgnrapporter, gengivet ordret og uden redigering.
+          Kun hændelser med gerningssted i ${omraadeTekst} er taget med.
+          ${p.kilde_url ? `<a href="${esc(p.kilde_url)}" target="_blank" rel="noopener noreferrer">Se alle døgnrapporter ↗</a>` : ""}
+        </p>
+      </div>
+      ${krop}
+    </div>
+  </section>`;
+}
+
+/* ═══════════ Arkivtræ: år › måned › uge ═══════════ */
+function byg(filter){
+  const tree = document.getElementById("tree");
+  const q = (filter || "").trim().toLowerCase();
+  const liste = q ? state.udgaver.filter(u => (u.titel + " uge " + u.uge).toLowerCase().includes(q)) : state.udgaver;
+  if (!liste.length){ tree.innerHTML = '<p class="tom">Ingen uger matcher søgningen.</p>'; return; }
+
+  const aar = {};
+  liste.forEach(u => { const m = maanedAf(u); (aar[u.aar] ||= {})[m] ||= []; aar[u.aar][m].push(u); });
+
+  const aA = state.aktiv ? state.aktiv.aar : null;
+  const aM = state.aktiv ? maanedAf(state.aktiv) : null;
+  let h = "";
+
+  Object.keys(aar).sort((a,b) => b - a).forEach(y => {
+    const aabenAar = q ? true : Number(y) === aA;
+    const antal = Object.values(aar[y]).reduce((s,a) => s + a.length, 0);
+    h += `<div class="yr${aabenAar ? " open" : ""}"><button type="button" aria-expanded="${aabenAar}">
+      <svg class="caret" width="9" height="9" viewBox="0 0 9 9" aria-hidden="true"><path d="M2 1l4 3.5L2 8" fill="none" stroke="#AEEAD9" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      ${y}<span class="n">${antal} uger</span></button><div class="months">`;
+
+    Object.keys(aar[y]).sort((a,b) => b - a).forEach(m => {
+      const aabenMdr = q ? true : (Number(y) === aA && Number(m) === aM);
+      h += `<div class="mo${aabenMdr ? " open" : ""}"><button type="button" aria-expanded="${aabenMdr}">
+        <svg class="caret" width="8" height="8" viewBox="0 0 9 9" aria-hidden="true"><path d="M2 1l4 3.5L2 8" fill="none" stroke="#7C97AC" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        ${MDR[m]}</button><div class="weeks">`;
+      aar[y][m].sort((a,b) => b.uge - a.uge).forEach(u => {
+        h += `<button type="button" class="wk" data-id="${esc(u.id)}" aria-current="${state.aktiv && state.aktiv.id === u.id}">
+          <span class="num">Uge ${u.uge}</span><span class="dt">${kortDato(u.dato_fra)}</span></button>`;
+      });
+      h += `</div></div>`;
+    });
+    h += `</div></div>`;
+  });
+
+  tree.innerHTML = h;
+  tree.querySelectorAll(".yr > button, .mo > button").forEach(b => {
+    b.onclick = () => { const p = b.parentElement; p.classList.toggle("open"); b.setAttribute("aria-expanded", p.classList.contains("open")); };
+  });
+  tree.querySelectorAll(".wk").forEach(b => {
+    b.onclick = () => { location.hash = b.dataset.id; document.getElementById("rail").classList.remove("vis"); };
+  });
+}
+
+/* ═══════════ Vis én udgave ═══════════ */
+async function vis(id){
+  const meta = state.udgaver.find(u => u.id === id) || state.udgaver[0];
+  if (!meta) return;
+  state.aktiv = meta;
+  const boks = document.getElementById("udgave");
+  boks.innerHTML = '<p class="status">Henter uge ' + meta.uge + '…</p>';
+  byg(document.getElementById("filter").value);
+  document.getElementById("nyeste").classList.toggle("vis", state.udgaver[0].id !== meta.id);
+
+  let d;
+  try {
+    const r = await fetch(meta.fil + "?v=" + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    d = await r.json();
+  } catch (e) {
+    boks.innerHTML = '<p class="status">Uge ' + meta.uge + ' kunne ikke hentes. Filen <code>' + esc(meta.fil) + '</code> mangler i arkivet.</p>';
+    return;
+  }
+
+  const i = state.udgaver.findIndex(u => u.id === meta.id);
+  const nyere = state.udgaver[i - 1], aeldre = state.udgaver[i + 1];
+
+  const top = Array.isArray(d.top) ? d.top.slice(0, 6) : [];
+  const sumL = top.reduce((s,t) => s + (t.likes || 0), 0);
+  const sumK = top.reduce((s,t) => s + (t.kommentarer || 0), 0);
+
+  const pol = d.politi || null;
+  const kilde = d.kilde || KILDE;
+
+  const chips = [
+    ["Periode", periode(meta) || "—"],
+    ["Opslag i ugen", d.antal_opslag || "—"],
+    top.length ? ["Mest omtalt", top[0].forfatter] : null,
+    pol ? ["Politisager", (pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)] : null
+  ].filter(Boolean);
+
+  let puls = "";
+  if (top.length){
+    const max = Math.max(...top.map(t => (t.likes || 0) + (t.kommentarer || 0)), 1);
+    puls = `<section class="puls reveal">
+      <div class="puls-hd"><h3>Ugens puls</h3><p class="sub">likes · kommentarer</p></div>
+      ${top.map((t,n) => {
+        const e = (t.likes || 0) + (t.kommentarer || 0);
+        return `<a class="bar" href="${esc(t.url || "#")}" target="_blank" rel="noopener noreferrer nofollow">
+          <span class="rk">${String(n+1).padStart(2,"0")}</span>
+          <span class="who">${esc(t.forfatter || "Ukendt")}</span>
+          <span class="track"><span class="fill" data-w="${Math.round(e / max * 100)}"></span></span>
+          <span class="val">${t.likes || 0} · ${t.kommentarer || 0}</span>
+        </a>`;
+      }).join("")}
+    </section>`;
+  }
+
+  boks.innerHTML = `
+    <section class="hero">
+      <div class="ghost" aria-hidden="true">${meta.uge}</div>
+      <div class="wrap">
+        <div class="eyebrow reveal"><i></i>Uge ${meta.uge} · ${meta.aar}</div>
+        <h1 class="reveal">${esc(d.titel || meta.titel || "Ugen i Greve")}</h1>
+        <p class="dek reveal">${esc(d.manchet || "")}</p>
+        <a class="kilde reveal" href="${esc(kilde.url)}" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l.5-3.5H13V7.2c0-1 .3-1.7 1.7-1.7H17V2.4A24 24 0 0 0 14.6 2C12 2 10.2 3.6 10.2 6.5v3H7V13h3.2v9H13z"/></svg>
+          Kilde: Facebook-gruppen <b>${esc(kilde.navn)}</b> ↗
+        </a>
+        <div class="chips reveal">
+          ${chips.map(c => `<div class="chip"><span class="k">${esc(c[0])}</span><span class="v">${esc(c[1])}</span></div>`).join("")}
+        </div>
+      </div>
+      ${bygBoelge(d.aktivitet)}
+    </section>
+    <div class="wrap">
+      ${puls}
+      <div class="article reveal">${rens(d.html)}</div>
+    </div>
+    ${bygPoliti(pol, meta.uge)}
+    <div class="wrap">
+      <nav class="pager">
+        ${aeldre ? `<a href="#${esc(aeldre.id)}"><span class="lbl">← Forrige uge</span><span class="ttl">Uge ${aeldre.uge}, ${aeldre.aar}</span></a>` : "<span></span>"}
+        ${nyere ? `<a class="next" href="#${esc(nyere.id)}"><span class="lbl">Næste uge →</span><span class="ttl">Uge ${nyere.uge}, ${nyere.aar}</span></a>` : ""}
+      </nav>
+    </div>`;
+
+  document.getElementById("topmeta").textContent = "Uge " + meta.uge + " · " + meta.aar;
+  document.title = "Uge " + meta.uge + ", " + meta.aar + " · Ugen på Greve Info";
+  window.scrollTo({ top: 0, behavior: "instant" });
+
+  // trinvis indtoning
+  boks.querySelectorAll(".reveal").forEach((el,n) => setTimeout(() => el.classList.add("in"), 70 + n * 85));
+  setTimeout(() => boks.querySelectorAll(".fill").forEach(f => f.style.width = f.dataset.w + "%"), 420);
+}
+
+/* ═══════════ Opstart ═══════════ */
+document.getElementById("railbtn").onclick = e => {
+  const r = document.getElementById("rail");
+  r.classList.toggle("vis");
+  e.currentTarget.setAttribute("aria-expanded", r.classList.contains("vis"));
+};
+document.getElementById("filter").oninput = e => byg(e.target.value);
+document.getElementById("nyeste").onclick = () => { location.hash = state.udgaver[0].id; };
+window.addEventListener("hashchange", () => vis(location.hash.slice(1)));
+
+(async () => {
+  try {
+    const r = await fetch("data/index.json?v=" + Date.now());
+    state.udgaver = ((await r.json()).udgaver || []).sort((a,b) => (b.aar - a.aar) || (b.uge - a.uge));
+  } catch (e) {
+    document.getElementById("udgave").innerHTML = '<p class="status">Arkivet kunne ikke hentes. Tjek at <code>data/index.json</code> ligger i repoet.</p>';
+    document.getElementById("tree").innerHTML = '<p class="tom">Arkivet er tomt.</p>';
+    return;
+  }
+  if (!state.udgaver.length){
+    document.getElementById("udgave").innerHTML = '<p class="status">Der er endnu ingen udgaver. Den første kommer torsdag morgen.</p>';
+    document.getElementById("tree").innerHTML = '<p class="tom">Ingen uger endnu.</p>';
+    return;
+  }
+  vis(location.hash.slice(1) || state.udgaver[0].id);
+})();
+</script>
+</body>
+</html>

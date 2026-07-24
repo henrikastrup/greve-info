@@ -1,0 +1,59 @@
+{
+  "id": "2026-W26",
+  "aar": 2026,
+  "uge": 26,
+  "maaned": 6,
+  "dato_fra": "2026-06-18",
+  "dato_til": "2026-06-24",
+  "titel": "Sankthans, vejarbejde og debatten om stien",
+  "manchet": "DEMODATA — den redaktionelle del er opdigtet. Politiafsnittet er ægte.",
+  "antal_opslag": 53,
+  "top": [
+    {
+      "forfatter": "Martin",
+      "likes": 203,
+      "kommentarer": 87,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Anders",
+      "likes": 34,
+      "kommentarer": 76,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Mette",
+      "likes": 141,
+      "kommentarer": 19,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    }
+  ],
+  "html": "<p><em>Opdigtet demoindhold med pladsholdernavne. Afsnittet med politiets døgnrapporter nedenfor er ægte data fra politi.dk.</em></p>\n<p>Ugens travleste med 53 opslag. Sankthans og vejarbejde på samme tid giver noget at skrive om.</p>\n\n<h2>Vejarbejdet delte vandene</h2>\n<p><strong>Martin</strong> spurgte, hvorfor omkørslen ved Karlslundevej ikke var skiltet ordentligt. Tråden løb over 80 kommentarer og bevægede sig fra praktisk information til en bredere diskussion om, hvordan vejarbejde varsles. Et par medlemmer henviste til kommunens egen side med trafikinformation, hvilket dæmpede tonen igen.</p>\n\n<h2>Sankthans på stranden</h2>\n<p>Billeder fra bålet blev delt fra tre forskellige steder langs kysten. <strong>Mette</strong>s billede af solnedgangen bagved bålet var det mest delte.</p>\n\n<h2>Elektriker søges</h2>\n<p><strong>Anders</strong> søgte en elektriker til at fjerne en defekt bevægelsessensor i loftet. Klassisk opslag i gruppen, og som altid endte kommentarerne med tre-fire navne, der går igen hver gang nogen spørger.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li><strong>Martin</strong> — skiltning ved vejarbejdet på Karlslundevej. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Anders</strong> — søger elektriker. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Mette</strong> — solnedgang ved sankthansbålet. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n</ol>",
+  "aktivitet": [
+    6,
+    7,
+    5,
+    9,
+    12,
+    8,
+    6
+  ],
+  "kilde": {
+    "navn": "Greve Info",
+    "url": "https://www.facebook.com/groups/1364758780217592"
+  },
+  "politi": {
+    "kilde": "Midt- og Vestsjællands Politi",
+    "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
+    "filter": [
+      "greve",
+      "hundige",
+      "karlslunde",
+      "mosede"
+    ],
+    "antal_haendelser": 0,
+    "antal_anmeldelser": 0,
+    "dage": []
+  },
+  "demo": true
+}

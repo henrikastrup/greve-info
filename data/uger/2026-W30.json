@@ -1,0 +1,150 @@
+{
+  "id": "2026-W30",
+  "aar": 2026,
+  "uge": 30,
+  "maaned": 7,
+  "dato_fra": "2026-07-16",
+  "dato_til": "2026-07-22",
+  "titel": "Hvepsebo, hundepasning og en meget våd onsdag",
+  "manchet": "DEMODATA — den redaktionelle del er opdigtet. Politiafsnittet er ægte.",
+  "antal_opslag": 41,
+  "top": [
+    {
+      "forfatter": "Mette",
+      "likes": 214,
+      "kommentarer": 63,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Birgit",
+      "likes": 46,
+      "kommentarer": 118,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Thomas",
+      "likes": 132,
+      "kommentarer": 21,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Kasper",
+      "likes": 18,
+      "kommentarer": 94,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Genbrugsbutikken",
+      "likes": 87,
+      "kommentarer": 12,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    }
+  ],
+  "html": "<p><em>Opdigtet demoindhold med pladsholdernavne. Afsnittet med politiets døgnrapporter nedenfor er ægte data fra politi.dk.</em></p>\n<p>Der er uger, hvor gruppen mest af alt handler om vejret, og det her var sådan en. Onsdagens skybrud satte sit tydelige præg på både billeder og kommentarspor, og det fyldte lige så meget som alle ugens efterlysninger tilsammen.</p>\n\n<h2>Vejret tog over</h2>\n<p><strong>Mette</strong> lagde igen billeder op fra morgenturen i mosen, og de blev ugens klart mest sete opslag. Regnbuen efter onsdagens byge blev delt af mindst fem forskellige medlemmer i løbet af en halv time — en påmindelse om, hvor hurtigt gruppen reagerer, når noget kan ses fra hele kommunen på én gang.</p>\n<p>Flere skrev om vand i kældre langs Strandvejen, og et par stykker efterlyste erfaringer med kloakforsikring. Diskussionen holdt sig i pæn tone, hvilket ikke er nogen selvfølge, når emnet er afløb.</p>\n\n<h2>Ugens mest kommenterede: hvepseboet</h2>\n<p><strong>Birgit</strong> spurgte, om nogen kunne anbefale en til at fjerne et hvepsebo under tagudhænget. Opslaget fik ikke mange likes, men over hundrede kommentarer — og det siger noget om, hvad gruppen faktisk bruges til. Anbefalingerne gik i to retninger: dem der ringer til et skadedyrsfirma, og dem der har en fætter med en dragt. Et par stykker mindede om, at boet må sidde, hvis det ikke er til gene, fordi hvepse også bestøver.</p>\n\n<h2>Hjælpsomheden</h2>\n<p><strong>Thomas</strong> sagde tak til den kvinde, der stoppede op og hjalp hans søn efter et cykelstyrt på stien ved Hundige. Den slags opslag går altid rent ind, og det gjorde det også her.</p>\n<p><strong>Kasper</strong> søgte hundepasning til sommerferien og fik svar fra en håndfuld naboer inden for et par timer. Det er tredje uge i træk, hvor pasning af dyr er blandt de mest aktive tråde — ferieperioden kan ses tydeligt i gruppen.</p>\n\n<h2>Kort fra resten af ugen</h2>\n<p><strong>Genbrugsbutikken</strong> viste nye donationer frem i butikken. <strong>Louise</strong> annoncerede opstart af privat børnepasning. Og så var der den tilbagevendende diskussion om hastigheden på Greve Strandvej, som denne gang blev holdt kort.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li><strong>Mette</strong> — regnbuen over mosen efter skybruddet. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Birgit</strong> — søger anbefaling til fjernelse af hvepsebo. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Thomas</strong> — tak for hjælp efter cykelstyrt. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Kasper</strong> — søger hundepasning til ferien. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Genbrugsbutikken</strong> — nye donationer i butikken. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n</ol>",
+  "aktivitet": [
+    5,
+    4,
+    6,
+    11,
+    7,
+    5,
+    3
+  ],
+  "kilde": {
+    "navn": "Greve Info",
+    "url": "https://www.facebook.com/groups/1364758780217592"
+  },
+  "politi": {
+    "kilde": "Midt- og Vestsjællands Politi",
+    "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
+    "filter": [
+      "greve",
+      "hundige",
+      "karlslunde",
+      "mosede"
+    ],
+    "antal_haendelser": 6,
+    "antal_anmeldelser": 2,
+    "dage": [
+      {
+        "dato": "17. juli 2026",
+        "iso": "2026-07-17",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-17-juli-2026/2026/07/17",
+        "anmeldelser": [],
+        "haendelser": [
+          {
+            "titel": "Butikstyveri",
+            "sted": "Over Bølgen, Greve",
+            "tid": "15.03",
+            "tekst": "Kl 15.03 blev politiet tilkaldt til et supermarked, hvor en 37-årig litauisk mand havde stjålet tøj mm til værdi af godt 2300 kroner. Manden blev sigtet og erkendte da også tyveriet."
+          }
+        ]
+      },
+      {
+        "dato": "20. juli 2026",
+        "iso": "2026-07-20",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-20-juli-2026/2026/07/20",
+        "anmeldelser": [
+          {
+            "kategori": "Tyveri fra køretøjer – Varebiler/lastbiler",
+            "sted": "Gersagerparken, Greve (samt et forsøg)"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Hærværk og ulovlig knallertkørsel",
+            "sted": "Lærkehegnet, Greve",
+            "tid": "17.25",
+            "tekst": "Kl 17.25 fik politiet anmeldelse om at to unge fyre kørte rundt på en knallert, der tilsyneladende var tunet så den kunne køre stærkere end tilladt. En beboer i området havde sagt til drengene, at de skulle vise mere hensyn, men det var de tilsyneladende ligeglade med. En patrulje fik fat i to drenge på 14 og 17 år. De havde forsøgt under kørslen at skjule deres udsende ved hjælp af hætter og mundbind og derfor både sigtet for at køre på ulovlig knallert og for at overtræde maskeringsforbuddet. Ydermere er det politiets vurdering, at drengene er de samme som dagen før havde knust en siderude i en parkeret patruljevogn ved Over Bølgen. Drengene blev derfor også sigtet for hærværk."
+          },
+          {
+            "titel": "Syrebomber på boldbane",
+            "sted": "Gersagerparken, Greve",
+            "tid": "18.48",
+            "tekst": "Kl 18.48 blev politiet tilkaldt til boldbanerne, hvor fire drenge skulle kaste med det, der senere viste sig at være syrebomber. Tre drenge på 9, 6 og 15 år truffet i området. Politiet fik en snak med drengene om situationen og sørgede også efterfølgende for at underrette deres familier og de sociale myndigheder."
+          }
+        ]
+      },
+      {
+        "dato": "22. juli 2026",
+        "iso": "2026-07-22",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-22-juli-2026/2026/07/22",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i fritids-/sommerhus",
+            "sted": "Brittavej, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Butikstyveri",
+            "sted": "Møllevej, Karlslunde, Greve",
+            "tid": "18.23",
+            "tekst": "Kl 18.23 standsede personalet i et supermarked en 34-årig rumænsk mand, som havde stjålet lidt madvarer. Manden blev sigtet for tyveriet og taget med til afhøring. Han erkendte og fik en straksbøde."
+          }
+        ]
+      },
+      {
+        "dato": "23. juli 2026",
+        "iso": "2026-07-23",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-23-juli-2026/2026/07/23",
+        "anmeldelser": [],
+        "haendelser": [
+          {
+            "titel": "Udsat for bedrageri",
+            "sted": "Greve",
+            "tid": "14.37",
+            "tekst": "Kl 14.37 blev det anmeldt, at en 87-årig kvinde og hendes 85-årige mand dagen før var blevet ringet op en mand, der oplyste, at han ringede fra banken. Han fik overtalt parret til at udlevere dankort og kode til en \"kollega\" der kort efter kom forbi. Der blev efterfølgende hævet 60.000 kroner ved forskellige hæveautomater."
+          },
+          {
+            "titel": "Butikstyveri",
+            "sted": "Over Bølgen, Greve",
+            "tid": "19.07",
+            "tekst": "Kl 19.07 standsede personalet en 30-årig litauisk mand, der havde stjålet en kasket og et par sandaler. Manden erkendte og blev sigtet for butikstyveri."
+          }
+        ]
+      }
+    ]
+  },
+  "demo": true
+}

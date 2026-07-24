@@ -1,0 +1,99 @@
+{
+  "id": "2026-W29",
+  "aar": 2026,
+  "uge": 29,
+  "maaned": 7,
+  "dato_fra": "2026-07-09",
+  "dato_til": "2026-07-15",
+  "titel": "Spejderlejr, sommerferie og en efterlyst kat",
+  "manchet": "DEMODATA — den redaktionelle del er opdigtet. Politiafsnittet er ægte.",
+  "antal_opslag": 28,
+  "top": [
+    {
+      "forfatter": "Peter",
+      "likes": 158,
+      "kommentarer": 34,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Hanne",
+      "likes": 96,
+      "kommentarer": 41,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Ove",
+      "likes": 71,
+      "kommentarer": 29,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    },
+    {
+      "forfatter": "Dorte",
+      "likes": 12,
+      "kommentarer": 47,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    }
+  ],
+  "html": "<p><em>Opdigtet demoindhold med pladsholdernavne. Afsnittet med politiets døgnrapporter nedenfor er ægte data fra politi.dk.</em></p>\n<p>Sommerferien kan ses direkte i tallene. 28 opslag mod normalt godt 40, men de opslag der kom, blev til gengæld talt grundigt igennem.</p>\n\n<h2>Fra Spejdernes Lejr</h2>\n<p><strong>Peter</strong> sendte billeder hjem fra lejren, og opslaget blev ugens mest sete. Flere forældre fulgte med i kommentarerne, og et par stykker brugte tråden til at aftale samkørsel hjem.</p>\n\n<h2>Den efterlyste kat</h2>\n<p><strong>Hanne</strong> savnede sin kat i tre døgn. Tråden voksede støt med observationer fra hele kvarteret, indtil katten dukkede op af sig selv fredag aften. Opdateringen fik næsten lige så mange reaktioner som selve efterlysningen.</p>\n\n<h2>Hjælp og hushjælp</h2>\n<p><strong>Ove</strong> tilbød at gå med en nervøs hundeejer de første par gange, og <strong>Dorte</strong> annoncerede hushjælp i Greve-området. Sidstnævnte fik en længere kommentartråd om, hvornår den slags opslag hører hjemme i gruppen — den blev afsluttet i god ro og orden.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li><strong>Peter</strong> — rapport fra Spejdernes Lejr. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Hanne</strong> — efterlyste kat, fundet igen. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Ove</strong> — tilbyder hjælp til nervøs hundeejer. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n  <li><strong>Dorte</strong> — tilbyder hushjælp i Greve. <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n</ol>",
+  "aktivitet": [
+    3,
+    4,
+    3,
+    5,
+    4,
+    6,
+    3
+  ],
+  "kilde": {
+    "navn": "Greve Info",
+    "url": "https://www.facebook.com/groups/1364758780217592"
+  },
+  "politi": {
+    "kilde": "Midt- og Vestsjællands Politi",
+    "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
+    "filter": [
+      "greve",
+      "hundige",
+      "karlslunde",
+      "mosede"
+    ],
+    "antal_haendelser": 2,
+    "antal_anmeldelser": 1,
+    "dage": [
+      {
+        "dato": "14. juli 2026",
+        "iso": "2026-07-14",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-14-juli-2026/2026/07/14",
+        "haendelser": [
+          {
+            "titel": "Defekt trailerwire",
+            "sted": "Mosede Landevej, Karlslunde, Greve",
+            "tid": "16.30",
+            "tekst": "Kl 16.30 skete der et færdselsuheld, da en varevogn med en 32-årig mand fra Ringsted bag rattet kørte over krydset ved Greve Landevej, hvor en trailer kom løs. Ingen kom til skade."
+          }
+        ],
+        "anmeldelser": []
+      },
+      {
+        "dato": "15. juli 2026",
+        "iso": "2026-07-15",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-15-juli-2026/2026/07/15",
+        "haendelser": [
+          {
+            "titel": "Tyveri af pant",
+            "sted": "Greve",
+            "tid": "11.46",
+            "tekst": "Kl 11.46 bemærkede en mand, der var ude at løbe en tur i et villakvarter, at en mand cyklede ned ad en blind vej og ikke kom retur. Det undrede den opmærksomme løber, som anmeldte forholdet."
+          }
+        ],
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Hundige Strandvej, Greve"
+          }
+        ]
+      }
+    ]
+  },
+  "demo": true
+}
