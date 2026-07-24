@@ -207,7 +207,7 @@ a{color:var(--blue)}
 /* Fanepanel — skift mellem Greve Info og Politirapporten */
 .fanebar{background:linear-gradient(90deg,#072335,#0A2C41);border-bottom:1px solid rgba(174,234,217,.14)}
 .fanebar .wrap{padding:16px 32px}
-.faner{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}
+.faner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0}
 .fane-btn{
   font-family:var(--display);font-weight:700;font-size:.86rem;letter-spacing:.03em;
   padding:15px 18px;border-radius:12px;cursor:pointer;text-align:center;
@@ -289,6 +289,12 @@ a{color:var(--blue)}
 /* ═══════════ Politiets døgnrapporter ═══════════ */
 .politi{background:transparent;border-top:1px solid var(--line);margin-top:0;padding:44px 0 60px}
 .politi .ph{margin-bottom:30px}
+.akt{background:transparent;border-top:1px solid var(--line);padding:44px 0 60px}
+.akt .ph{margin-bottom:30px}
+.akt h2{
+  font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.2;
+  letter-spacing:-.015em;color:var(--navy);margin:0 0 10px;
+}
 .pe{
   display:inline-block;font-family:var(--display);font-size:.66rem;font-weight:800;
   letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--deep);
@@ -432,8 +438,13 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   .pager{grid-template-columns:1fr}
   .politi{margin-top:44px;padding:38px 0 42px}
   .politi h2{font-size:1.25rem}
+  .akt{padding:38px 0 42px}
+  .akt h2{font-size:1.25rem}
   .sag{padding:15px 16px}
   .pager .next{grid-column:1;text-align:left}
+}
+@media (max-width:560px){
+  .faner{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -516,7 +527,7 @@ const MDR = ["januar","februar","marts","april","maj","juni","juli","august","se
 const DAGE = ["Man","Tir","Ons","Tor","Fre","Lør","Søn"];
 /* Kilden til alt indhold i den redaktionelle del */
 const KILDE = { navn: "Greve Info", url: "https://www.facebook.com/groups/1364758780217592" };
-const state = { udgaver: [], aktiv: null, faneblad: "greve" };
+const state = { udgaver: [], aktiv: null, faneblad: "greve", aktiviteter: null };
 
 /* ═══════════ Vejret i Greve Strand (Open-Meteo, ingen nøgle nødvendig) ═══════════ */
 const VEJR_LAT = 55.5966, VEJR_LON = 12.2966;
@@ -703,6 +714,29 @@ function bygPoliti(p, uge){
   </section>`;
 }
 
+/* ═══════════ Aktiviteter i Greve og omegn (Kultunaut, hentet af n8n hver mandag) ═══════════ */
+function bygAktiviteter(a){
+  if (!a || !a.html){
+    return `<section class="akt reveal"><div class="wrap">
+      <p class="status">Der er endnu ingen aktivitetsoversigt. Den opdateres automatisk hver mandag morgen.</p>
+    </div></section>`;
+  }
+  const periodeTxt = periode({ dato_fra: a.periode_fra, dato_til: a.periode_til });
+  return `<section class="akt reveal">
+    <div class="wrap">
+      <div class="ph">
+        <span class="pe">Aktiviteter i Greve og omegn</span>
+        <h2>Hvad sker der i ugen der kommer${periodeTxt ? " · " + periodeTxt : ""}</h2>
+        <p class="pk">
+          Arrangementer, foredrag og koncerter i Greve og omegn.
+          ${a.kilde ? `<a href="${esc(a.kilde.url)}" target="_blank" rel="noopener noreferrer">Kilde: ${esc(a.kilde.navn)} ↗</a>` : ""}
+        </p>
+      </div>
+      <div class="article reveal">${rens(a.html)}</div>
+    </div>
+  </section>`;
+}
+
 /* ═══════════ Arkivtræ: år › måned › uge ═══════════ */
 function byg(filter){
   const tree = document.getElementById("tree");
@@ -807,6 +841,7 @@ async function vis(id){
         <div class="faner reveal" role="tablist" aria-label="Vælg visning">
           <button type="button" class="fane-btn" data-fane="greve" role="tab">Greve Info</button>
           <button type="button" class="fane-btn" data-fane="politi" role="tab">Politirapporten${pol ? `<span class="badge">${(pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)}</span>` : ""}</button>
+          <button type="button" class="fane-btn" data-fane="aktiviteter" role="tab">Aktiviteter i Greve og omegn</button>
         </div>
       </div>
     </div>
@@ -834,6 +869,9 @@ async function vis(id){
     </div>
     <div class="visning" data-visning="politi">
       ${pol ? bygPoliti(pol, meta.uge) : `<div class="wrap"><p class="status">Ingen politirapport for uge ${meta.uge}.</p></div>`}
+    </div>
+    <div class="visning" data-visning="aktiviteter">
+      ${bygAktiviteter(state.aktiviteter)}
     </div>
     <div class="wrap">
       <nav class="pager">
@@ -881,6 +919,12 @@ window.addEventListener("hashchange", () => vis(location.hash.slice(1)));
     document.getElementById("udgave").innerHTML = '<p class="status">Arkivet kunne ikke hentes. Tjek at <code>data/index.json</code> ligger i repoet.</p>';
     document.getElementById("tree").innerHTML = '<p class="tom">Arkivet er tomt.</p>';
     return;
+  }
+  try {
+    const ra = await fetch("data/aktiviteter.json?v=" + Date.now());
+    state.aktiviteter = ra.ok ? await ra.json() : null;
+  } catch (e) {
+    state.aktiviteter = null;
   }
   if (!state.udgaver.length){
     document.getElementById("udgave").innerHTML = '<p class="status">Der er endnu ingen udgaver. Den første kommer torsdag morgen.</p>';
