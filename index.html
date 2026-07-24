@@ -36,7 +36,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--paper);color:var(--ink);
+  margin:0;background:var(--deep);color:var(--ink);
   font-family:var(--text);font-size:18px;line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
@@ -161,12 +161,14 @@ a{color:var(--blue)}
 .tom{font-family:var(--display);font-size:.8rem;color:#7C97AC;padding:10px 6px}
 
 /* ═══════════ Hero ═══════════ */
-.main{min-width:0;padding-bottom:0}
+/* .main er blå hele vejen ned, uanset fane og indholdslængde — hero'en lægger kun */
+/* et ekstra "spotlight" (skinnet nedenfor) oven på den samme baggrund, ingen separat farve. */
+.main{min-width:0;padding-bottom:0;background:var(--deep);color:#fff}
 .wrap{max-width:790px;margin:0 auto;padding:0 32px}
 
 .hero{
   position:relative;overflow:hidden;color:#fff;
-  background:linear-gradient(152deg,#061F30 0%,#00305F 52%,#004E9E 100%);
+  background:radial-gradient(ellipse 900px 500px at 30% 0%,#004E9E,transparent 70%);
   padding:70px 0 0;
 }
 .hero::after{
@@ -300,17 +302,10 @@ a{color:var(--blue)}
 .pk{font-family:var(--display);font-size:.85rem;color:#B9D3E4;margin:0;line-height:1.6}
 .pk a{color:var(--mint);font-weight:600}
 
-/* ═══════════ Politirapport- og aktivitets-indhold (under hero'en, på almindelig sidebaggrund) ═══════════ */
-/* Trækkes op over hero'ens underkant, ligesom .puls, så der ikke er en grå stribe imellem.
-   .politi trækkes lidt længere op end .akt, fordi dens første synlige element er datopillen
-   i .dagh, ikke selve det hvide kort — uden det ekstra ville der stå en tynd rest af hero'en. */
-.politi, .akt{padding:0 0 60px;position:relative;z-index:5}
-.politi{margin-top:-44px}
-.akt{margin-top:-38px}
-.akt .article{
-  background:#fff;border-radius:16px;box-shadow:var(--lift);
-  padding:30px 34px 34px;
-}
+/* ═══════════ Politirapport- og aktivitets-indhold ═══════════ */
+/* Ingen egen baggrund her — .main er blå hele vejen ned, så der er intet skel at dække over.
+   .article-kortet (se ovenfor) giver den hvide baggrund til selve akt-teksten. */
+.politi, .akt{padding:36px 0 60px}
 
 .dag{margin-bottom:26px}
 .dagh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
@@ -356,8 +351,11 @@ a{color:var(--blue)}
   font-size:.9rem;color:var(--muted);text-align:center;
 }
 
-/* ═══════════ Artikel ═══════════ */
-.article{font-size:1.09rem;color:#22323F}
+/* ═══════════ Artikel — hvidt kort, da .main nu er blå hele vejen ned ═══════════ */
+.article{
+  font-size:1.09rem;color:#22323F;
+  background:#fff;border-radius:16px;box-shadow:var(--lift);padding:30px 34px 34px;
+}
 .article h2{
   font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1.22;
   letter-spacing:-.015em;color:var(--navy);margin:2.6em 0 .55em;
@@ -413,7 +411,7 @@ a{color:var(--blue)}
 .pager .ttl{font-family:var(--display);font-size:.98rem;font-weight:600;color:var(--navy);line-height:1.3}
 .pager .next{text-align:right;grid-column:2}
 
-.status{padding:90px 32px;text-align:center;color:var(--muted);font-family:var(--display);font-size:.95rem}
+.status{padding:90px 32px;text-align:center;color:#B9D3E4;font-family:var(--display);font-size:.95rem}
 
 /* ═══════════ Footer ═══════════ */
 footer{background:var(--navy);color:#A9C1D3;font-family:var(--display);font-size:.8rem;line-height:1.7}
