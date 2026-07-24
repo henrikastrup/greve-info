@@ -204,10 +204,8 @@ a{color:var(--blue)}
 }
 .chip .v{font-family:var(--display);font-size:1.02rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
 
-/* Fanepanel — skift mellem Greve Info og Politirapporten */
-.fanebar{background:linear-gradient(90deg,#072335,#0A2C41);border-bottom:1px solid rgba(174,234,217,.14)}
-.fanebar .wrap{padding:16px 32px}
-.faner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0}
+/* Fanepanel — skift mellem Greve Info, Politirapporten og Aktiviteter (lever inde i hero'en) */
+.faner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 0 30px}
 .fane-btn{
   font-family:var(--display);font-weight:700;font-size:.86rem;letter-spacing:.03em;
   padding:15px 18px;border-radius:12px;cursor:pointer;text-align:center;
@@ -286,21 +284,11 @@ a{color:var(--blue)}
 .kilde:hover{color:#fff;border-bottom-color:var(--mint)}
 .kilde svg{flex:none}
 
-/* ═══════════ Politiets døgnrapporter & Aktiviteter — samme mørkeblå baggrund som hero'en ═══════════ */
-.politi, .akt{
-  /* Faste pixel-stop i stedet for %, så farveovergangen ikke strækkes ud og udvandes på lange sider */
-  background:linear-gradient(152deg,#061F30 0px,#00305F 420px,#004E9E 820px);
-  padding:44px 0 60px;
-}
-.politi .ph{margin-bottom:30px}
-.akt .ph{margin-bottom:24px}
-.akt h2{
+/* ═══════════ Politirapport- og aktivitets-mærkat i hero'en (samme mørkeblå baggrund som Greve Info) ═══════════ */
+.ph{padding-bottom:44px}
+.ph h2{
   font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.2;
   letter-spacing:-.015em;color:#fff;margin:0 0 10px;
-}
-.akt .article{
-  background:#fff;border-radius:16px;box-shadow:var(--lift);
-  padding:30px 34px 34px;
 }
 .pe{
   display:inline-flex;align-items:center;gap:10px;
@@ -309,13 +297,15 @@ a{color:var(--blue)}
   background:rgba(174,234,217,.12);border:1px solid rgba(174,234,217,.28);
   border-radius:999px;padding:7px 15px;margin-bottom:16px;
 }
-.politi h2{
-  font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.2;
-  letter-spacing:-.015em;color:#fff;margin:0 0 10px;
-}
 .pk{font-family:var(--display);font-size:.85rem;color:#B9D3E4;margin:0;line-height:1.6}
 .pk a{color:var(--mint);font-weight:600}
-.politi .status, .akt .status{color:#B9D3E4}
+
+/* ═══════════ Politirapport- og aktivitets-indhold (under hero'en, på almindelig sidebaggrund) ═══════════ */
+.politi, .akt{padding:34px 0 60px}
+.akt .article{
+  background:#fff;border-radius:16px;box-shadow:var(--lift);
+  padding:30px 34px 34px;
+}
 
 .dag{margin-bottom:26px}
 .dagh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
@@ -444,12 +434,10 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   .bar .track{display:none}
   .faner{gap:8px}
   .fane-btn{font-size:.76rem;padding:13px 10px}
-  .fanebar .wrap{padding:14px 20px}
   .pager{grid-template-columns:1fr}
-  .politi{padding:38px 0 42px}
-  .politi h2{font-size:1.25rem}
-  .akt{padding:38px 0 42px}
-  .akt h2{font-size:1.25rem}
+  .politi, .akt{padding:28px 0 42px}
+  .ph{padding-bottom:32px}
+  .ph h2{font-size:1.25rem}
   .sag{padding:15px 16px}
   .pager .next{grid-column:1;text-align:left}
 }
@@ -677,14 +665,30 @@ function bygBoelge(aktivitet){
 }
 
 /* ═══════════ Politiets døgnrapporter ═══════════ */
-function bygPoliti(p, uge){
-  if (!p) return "";
-  const omraade = (p.filter || ["greve","hundige","karlslunde","mosede"])
+function politiOmraade(p){
+  const omraade = ((p && p.filter) || ["greve","hundige","karlslunde","mosede"])
     .map(s => s.charAt(0).toUpperCase() + s.slice(1));
-  const omraadeTekst = omraade.slice(0,-1).join(", ") + " og " + omraade[omraade.length-1];
+  return omraade.slice(0,-1).join(", ") + " og " + omraade[omraade.length-1];
+}
+function bygPolitiHeader(p, uge){
+  const omraadeTekst = politiOmraade(p);
+  return `<div class="ph reveal">
+    <span class="pe">Fra politiets døgnrapporter</span>
+    <h2>Uge ${uge} i ${omraadeTekst}</h2>
+    <p class="pk">
+      Uddrag af ${esc((p && p.kilde) || "politiets")} døgnrapporter, gengivet ordret og uden redigering.
+      Kun hændelser med gerningssted i ${omraadeTekst} er taget med.
+      ${p && p.kilde_url ? `<a href="${esc(p.kilde_url)}" target="_blank" rel="noopener noreferrer">Se alle døgnrapporter ↗</a>` : ""}
+    </p>
+  </div>`;
+}
+function bygPolitiKrop(p){
+  if (!p) return `<p class="ingen">Ingen politirapport for denne uge.</p>`;
+  const omraadeTekst = politiOmraade(p);
   const dage = Array.isArray(p.dage) ? p.dage : [];
+  if (!dage.length) return `<p class="ingen">Der var ingen hændelser fra ${omraadeTekst} i ugens døgnrapporter.</p>`;
 
-  const krop = dage.length ? dage.map(d => `
+  return dage.map(d => `
     <div class="dag">
       <div class="dagh">
         <span class="datopil">${esc(d.dato)}</span>
@@ -705,46 +709,26 @@ function bygPoliti(p, uge){
           <h5>Anmeldte indbrud og tyverier</h5>
           <ul>${d.anmeldelser.map(a => `<li><span>${esc(a.kategori)}</span>${esc(a.sted)}</li>`).join("")}</ul>
         </div>` : ""}
-    </div>`).join("")
-    : `<p class="ingen">Der var ingen hændelser fra ${omraadeTekst} i ugens døgnrapporter.</p>`;
-
-  return `<section class="politi reveal">
-    <div class="wrap">
-      <div class="ph">
-        <span class="pe">Fra politiets døgnrapporter</span>
-        <h2>Uge ${uge} i ${omraadeTekst}</h2>
-        <p class="pk">
-          Uddrag af ${esc(p.kilde || "politiets")} døgnrapporter, gengivet ordret og uden redigering.
-          Kun hændelser med gerningssted i ${omraadeTekst} er taget med.
-          ${p.kilde_url ? `<a href="${esc(p.kilde_url)}" target="_blank" rel="noopener noreferrer">Se alle døgnrapporter ↗</a>` : ""}
-        </p>
-      </div>
-      ${krop}
-    </div>
-  </section>`;
+    </div>`).join("");
 }
 
 /* ═══════════ Aktiviteter i Greve og omegn (Kultunaut, hentet af n8n hver mandag) ═══════════ */
-function bygAktiviteter(a){
+function bygAktiviteterHeader(a){
+  const periodeTxt = a ? periode({ dato_fra: a.periode_fra, dato_til: a.periode_til }) : "";
+  return `<div class="ph reveal">
+    <span class="pe">Aktiviteter i Greve og omegn</span>
+    <h2>Hvad sker der i ugen der kommer${periodeTxt ? " · " + periodeTxt : ""}</h2>
+    <p class="pk">
+      Arrangementer, foredrag og koncerter i Greve og omegn.
+      ${a && a.kilde ? `<a href="${esc(a.kilde.url)}" target="_blank" rel="noopener noreferrer">Kilde: ${esc(a.kilde.navn)} ↗</a>` : ""}
+    </p>
+  </div>`;
+}
+function bygAktiviteterKrop(a){
   if (!a || !a.html){
-    return `<section class="akt reveal"><div class="wrap">
-      <p class="status">Der er endnu ingen aktivitetsoversigt. Den opdateres automatisk hver mandag morgen.</p>
-    </div></section>`;
+    return `<p class="status">Der er endnu ingen aktivitetsoversigt. Den opdateres automatisk hver mandag morgen.</p>`;
   }
-  const periodeTxt = periode({ dato_fra: a.periode_fra, dato_til: a.periode_til });
-  return `<section class="akt reveal">
-    <div class="wrap">
-      <div class="ph">
-        <span class="pe">Aktiviteter i Greve og omegn</span>
-        <h2>Hvad sker der i ugen der kommer${periodeTxt ? " · " + periodeTxt : ""}</h2>
-        <p class="pk">
-          Arrangementer, foredrag og koncerter i Greve og omegn.
-          ${a.kilde ? `<a href="${esc(a.kilde.url)}" target="_blank" rel="noopener noreferrer">Kilde: ${esc(a.kilde.navn)} ↗</a>` : ""}
-        </p>
-      </div>
-      <div class="article reveal">${rens(a.html)}</div>
-    </div>
-  </section>`;
+  return `<div class="article reveal">${rens(a.html)}</div>`;
 }
 
 /* ═══════════ Arkivtræ: år › måned › uge ═══════════ */
@@ -846,19 +830,16 @@ async function vis(id){
   }
 
   boks.innerHTML = `
-    <div class="fanebar">
+    <section class="hero">
+      <div class="ghost" aria-hidden="true">${meta.uge}</div>
       <div class="wrap">
         <div class="faner reveal" role="tablist" aria-label="Vælg visning">
           <button type="button" class="fane-btn" data-fane="greve" role="tab">Greve Info</button>
           <button type="button" class="fane-btn" data-fane="politi" role="tab">Politirapporten${pol ? `<span class="badge">${(pol.antal_haendelser || 0) + (pol.antal_anmeldelser || 0)}</span>` : ""}</button>
           <button type="button" class="fane-btn" data-fane="aktiviteter" role="tab">Aktiviteter i Greve og omegn</button>
         </div>
-      </div>
-    </div>
-    <div class="visning" data-visning="greve">
-      <section class="hero">
-        <div class="ghost" aria-hidden="true">${meta.uge}</div>
-        <div class="wrap">
+
+        <div class="visning" data-visning="greve">
           <div class="eyebrow reveal"><i></i>Uge ${meta.uge} · ${meta.aar}</div>
           <h1 class="reveal">${esc(d.titel || meta.titel || "Ugen i Greve")}</h1>
           <p class="dek reveal">${esc(d.manchet || "")}</p>
@@ -870,19 +851,26 @@ async function vis(id){
             ${chips.map(c => `<div class="chip"><span class="k">${esc(c[0])}</span><span class="v">${esc(c[1])}</span></div>`).join("")}
           </div>
         </div>
-        ${bygBoelge(d.aktivitet)}
-      </section>
+
+        <div class="visning" data-visning="politi">${bygPolitiHeader(pol, meta.uge)}</div>
+        <div class="visning" data-visning="aktiviteter">${bygAktiviteterHeader(state.aktiviteter)}</div>
+      </div>
+      <div class="visning" data-visning="greve">${bygBoelge(d.aktivitet)}</div>
+    </section>
+
+    <div class="visning" data-visning="greve">
       <div class="wrap">
         ${puls}
         <div class="article reveal">${rens(d.html)}</div>
       </div>
     </div>
     <div class="visning" data-visning="politi">
-      ${pol ? bygPoliti(pol, meta.uge) : `<section class="politi reveal"><div class="wrap"><p class="status">Ingen politirapport for uge ${meta.uge}.</p></div></section>`}
+      <div class="politi reveal"><div class="wrap">${bygPolitiKrop(pol)}</div></div>
     </div>
     <div class="visning" data-visning="aktiviteter">
-      ${bygAktiviteter(state.aktiviteter)}
+      <div class="akt reveal"><div class="wrap">${bygAktiviteterKrop(state.aktiviteter)}</div></div>
     </div>
+
     <div class="wrap">
       <nav class="pager">
         ${aeldre ? `<a href="#${esc(aeldre.id)}"><span class="lbl">← Forrige uge</span><span class="ttl">Uge ${aeldre.uge}, ${aeldre.aar}</span></a>` : "<span></span>"}
