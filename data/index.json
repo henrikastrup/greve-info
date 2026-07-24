@@ -1,1 +1,38 @@
-{"opdateret":"2026-07-23T07:15:00+02:00","udgaver":[{"id":"2026-W30","aar":2026,"uge":30,"maaned":7,"dato_fra":"2026-07-16","dato_til":"2026-07-22","titel":"Hvepsebo, hundepasning og en meget våd onsdag","antal_opslag":41,"fil":"data/uger/2026-W30.json"},{"id":"2026-W29","aar":2026,"uge":29,"maaned":7,"dato_fra":"2026-07-09","dato_til":"2026-07-15","titel":"Spejderlejr, sommerferie og en efterlyst kat","antal_opslag":28,"fil":"data/uger/2026-W29.json"},{"id":"2026-W26","aar":2026,"uge":26,"maaned":6,"dato_fra":"2026-06-18","dato_til":"2026-06-24","titel":"Sankthans, vejarbejde og debatten om stien","antal_opslag":53,"fil":"data/uger/2026-W26.json"}]}
+{
+  "opdateret": "2026-07-24T07:59:55.870Z",
+  "udgaver": [
+    {
+      "id": "2026-W30",
+      "aar": 2026,
+      "uge": 30,
+      "maaned": 7,
+      "dato_fra": "2026-07-16",
+      "dato_til": "2026-07-22",
+      "titel": "Hvepsebo, hundepasning og en meget våd onsdag",
+      "antal_opslag": 41,
+      "fil": "data/uger/2026-W30.json"
+    },
+    {
+      "id": "2026-W29",
+      "aar": 2026,
+      "uge": 29,
+      "maaned": 7,
+      "dato_fra": "2026-07-17",
+      "dato_til": "2026-07-23",
+      "titel": "Ugens største samtaleemne: Morgentimer i mosen og omsorg for de firbenede",
+      "antal_opslag": 74,
+      "fil": "data/uger/2026-W29.json"
+    },
+    {
+      "id": "2026-W26",
+      "aar": 2026,
+      "uge": 26,
+      "maaned": 6,
+      "dato_fra": "2026-06-18",
+      "dato_til": "2026-06-24",
+      "titel": "Sankthans, vejarbejde og debatten om stien",
+      "antal_opslag": 53,
+      "fil": "data/uger/2026-W26.json"
+    }
+  ]
+}
