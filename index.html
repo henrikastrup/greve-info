@@ -71,6 +71,23 @@ a{color:var(--blue)}
   text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;
 }
 
+/* ═══════════ Vejret i Greve Strand ═══════════ */
+.vejr{background:linear-gradient(90deg,#072335,#0A2C41);border-bottom:1px solid rgba(174,234,217,.14);color:#fff}
+.vejr-wrap{display:flex;align-items:center;gap:28px;padding:13px 32px;overflow-x:auto}
+.vejr-nu{display:flex;align-items:center;gap:11px;flex:none}
+.vejr-nu .vejr-ikon{color:var(--mint);flex:none;display:flex}
+.vejr-nu .vejr-ikon svg{width:30px;height:30px}
+.vejr-tekst{display:flex;flex-direction:column;line-height:1.25}
+.vejr-sted{font-family:var(--display);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8FB3CC}
+.vejr-graden{font-family:var(--display);font-size:1.28rem;font-weight:800;font-variant-numeric:tabular-nums}
+.vejr-beskrivelse{font-family:var(--display);font-size:.76rem;color:#C4D6E3}
+.vejr-timer{display:flex;gap:17px;flex:none;padding-left:14px;border-left:1px solid rgba(174,234,217,.16)}
+.vejr-time{display:flex;flex-direction:column;align-items:center;gap:3px;flex:none;min-width:36px;color:var(--mint)}
+.vejr-time .t{font-family:var(--display);font-size:.63rem;color:#8FB3CC;font-variant-numeric:tabular-nums}
+.vejr-time svg{width:19px;height:19px}
+.vejr-time .g{font-family:var(--display);font-size:.76rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+@media (max-width:920px){.vejr-wrap{padding:12px 20px;gap:20px}}
+
 .shell{display:grid;grid-template-columns:var(--rail) minmax(0,1fr)}
 
 /* ═══════════ Arkivskinne ═══════════ */
@@ -420,6 +437,20 @@ footer .fine{color:#6E8CA3;font-size:.72rem;margin-top:12px;max-width:70ch}
   <button class="railbtn" id="railbtn" aria-expanded="false" aria-controls="rail">Arkiv</button>
 </header>
 
+<section class="vejr" id="vejr" aria-label="Vejret i Greve Strand">
+  <div class="wrap vejr-wrap">
+    <div class="vejr-nu">
+      <span class="vejr-ikon" id="vejrIkonNu"></span>
+      <div class="vejr-tekst">
+        <span class="vejr-sted">Vejret i Greve Strand</span>
+        <span class="vejr-graden" id="vejrGrader">–</span>
+        <span class="vejr-beskrivelse" id="vejrBeskrivelse">Henter vejret…</span>
+      </div>
+    </div>
+    <div class="vejr-timer" id="vejrTimer"></div>
+  </div>
+</section>
+
 <div class="shell">
 
   <nav class="rail" id="rail" aria-label="Arkiv">
@@ -465,6 +496,71 @@ const DAGE = ["Man","Tir","Ons","Tor","Fre","Lør","Søn"];
 /* Kilden til alt indhold i den redaktionelle del */
 const KILDE = { navn: "Greve Info", url: "https://www.facebook.com/groups/1364758780217592" };
 const state = { udgaver: [], aktiv: null };
+
+/* ═══════════ Vejret i Greve Strand (Open-Meteo, ingen nøgle nødvendig) ═══════════ */
+const VEJR_LAT = 55.5966, VEJR_LON = 12.2966;
+const VEJRKODER = {
+  0:["sol","Klar himmel"], 1:["delvistsol","Mest klart"], 2:["delvistsol","Delvist skyet"],
+  3:["sky","Overskyet"], 45:["taage","Tåge"], 48:["taage","Tåge"],
+  51:["regn","Støvregn"], 53:["regn","Støvregn"], 55:["regn","Støvregn"],
+  56:["regn","Underafkølet støvregn"], 57:["regn","Underafkølet støvregn"],
+  61:["regn","Regn"], 63:["regn","Regn"], 65:["regn","Kraftig regn"],
+  66:["regn","Underafkølet regn"], 67:["regn","Underafkølet regn"],
+  71:["sne","Sne"], 73:["sne","Sne"], 75:["sne","Kraftig sne"], 77:["sne","Snekorn"],
+  80:["regn","Regnbyger"], 81:["regn","Regnbyger"], 82:["regn","Kraftige regnbyger"],
+  85:["sne","Snebyger"], 86:["sne","Snebyger"],
+  95:["torden","Tordenvejr"], 96:["torden","Tordenvejr med hagl"], 99:["torden","Tordenvejr med hagl"]
+};
+const vejrInfo = kode => VEJRKODER[kode] || ["sky","Skyet"];
+function vejrIkon(navn){
+  const p = {
+    sol: '<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" stroke-linecap="round"/>',
+    delvistsol: '<circle cx="8" cy="8" r="3"/><path d="M8 3v1.4M3 8h1.4M12.4 3.6l-1 1M3.6 12.4l1-1" stroke-linecap="round"/><path d="M9 19h9a3.5 3.5 0 0 0 .4-6.98A4.8 4.8 0 0 0 9.6 10.6 3.5 3.5 0 0 0 9 19z"/>',
+    sky: '<path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 9.2 4 4 0 0 0 7 18z"/>',
+    taage: '<path d="M7 12h10a4 4 0 0 0 .3-7.98A5.5 5.5 0 0 0 7.1 3.4 4 4 0 0 0 7 12z"/><path d="M4 16h16M6 20h12" stroke-linecap="round"/>',
+    regn: '<path d="M7 14h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 5.2 4 4 0 0 0 7 14z"/><path d="M9 17l-1 3M13 17l-1 3M17 17l-1 3" stroke-linecap="round"/>',
+    sne: '<path d="M7 13h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 4.2 4 4 0 0 0 7 13z"/><path d="M9 17v3M9 17l-1.5 1M9 17l1.5 1M14 17v3M14 17l-1.5 1M14 17l1.5 1" stroke-linecap="round"/>',
+    torden: '<path d="M7 12h9a4 4 0 0 0 .4-7.97A5.5 5.5 0 0 0 7.1 3.3 4 4 0 0 0 7 12z"/><path d="M13 12l-3 5h2.5l-1.5 4 4-6h-2.5z" stroke-linejoin="round"/>'
+  }[navn] || '<path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 9.2 4 4 0 0 0 7 18z"/>';
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">${p}</svg>`;
+}
+async function hentVejr(){
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${VEJR_LAT}&longitude=${VEJR_LON}` +
+      `&current=temperature_2m,apparent_temperature,weather_code&hourly=temperature_2m,weather_code` +
+      `&timezone=Europe%2FCopenhagen&forecast_days=1`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+
+    const [ikonNu, tekstNu] = vejrInfo(d.current.weather_code);
+    document.getElementById("vejrIkonNu").innerHTML = vejrIkon(ikonNu);
+    document.getElementById("vejrGrader").textContent = Math.round(d.current.temperature_2m) + "°";
+    document.getElementById("vejrBeskrivelse").textContent =
+      tekstNu + " · føles som " + Math.round(d.current.apparent_temperature) + "°";
+
+    // Resten af dagens timer, ud fra klokkeslættet i tidsstrengen (undgår tidszone-forskydning)
+    const nuTimer = new Date().getHours();
+    const tider = d.hourly.time || [];
+    let startIdx = tider.findIndex(t => Number(t.slice(11,13)) >= nuTimer);
+    if (startIdx === -1) startIdx = tider.length;
+    const rest = tider.slice(startIdx, startIdx + 8);
+
+    document.getElementById("vejrTimer").innerHTML = rest.map((t, i) => {
+      const idx = startIdx + i;
+      const [ik] = vejrInfo(d.hourly.weather_code[idx]);
+      return `<div class="vejr-time">
+        <span class="t">${t.slice(11,16)}</span>
+        ${vejrIkon(ik)}
+        <span class="g">${Math.round(d.hourly.temperature_2m[idx])}°</span>
+      </div>`;
+    }).join("");
+  } catch (e) {
+    document.getElementById("vejrBeskrivelse").textContent = "Vejrdata kunne ikke hentes lige nu";
+  }
+}
+hentVejr();
+setInterval(hentVejr, 15 * 60 * 1000);
 
 /* Rensning af HTML, så indhold fra Facebook ikke kan køre kode */
 function rens(html){
