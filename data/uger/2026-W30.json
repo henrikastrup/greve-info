@@ -3,61 +3,61 @@
   "aar": 2026,
   "uge": 30,
   "maaned": 7,
-  "dato_fra": "2026-07-20",
-  "dato_til": "2026-07-26",
-  "titel": "Ugens gang i Greve Info: Fra mosens morgengry til hjælpsomme naboer",
-  "manchet": "78 opslag i gruppen i ugens løb.",
-  "antal_opslag": 78,
+  "dato_fra": "2026-07-21",
+  "dato_til": "2026-07-27",
+  "titel": "Naturglæde, Skovture og Drilsk Sommervejr Fyldte Mosen og Skoven",
+  "manchet": "79 opslag i gruppen i ugens løb.",
+  "antal_opslag": 79,
   "kilde": {
     "navn": "Greve Info",
     "url": "https://www.facebook.com/groups/1364758780217592"
   },
   "top": [
     {
+      "forfatter": "Keld",
+      "likes": 278,
+      "kommentarer": 17,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28743901305209970/"
+    },
+    {
       "forfatter": "Susan",
-      "likes": 273,
+      "likes": 277,
       "kommentarer": 17,
       "url": "https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/"
     },
     {
-      "forfatter": "Keld",
-      "likes": 256,
-      "kommentarer": 16,
-      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28743901305209970/"
-    },
-    {
-      "forfatter": "El-khodier",
-      "likes": 57,
-      "kommentarer": 69,
-      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28694472796819488/"
+      "forfatter": "Jane",
+      "likes": 129,
+      "kommentarer": 13,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28772378635695570/"
     },
     {
       "forfatter": "Katrine",
-      "likes": 91,
+      "likes": 93,
       "kommentarer": 24,
       "url": "https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/"
     },
     {
       "forfatter": "Jane",
-      "likes": 88,
+      "likes": 78,
       "kommentarer": 10,
-      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28701783982755036/"
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28714403948159706/"
     },
     {
       "forfatter": "Jane",
-      "likes": 81,
+      "likes": 74,
       "kommentarer": 11,
-      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28690722940527807/"
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/28726330510300383/"
     }
   ],
   "aktivitet": [
-    14,
-    9,
+    18,
+    8,
     13,
     5,
     18,
     4,
-    15
+    13
   ],
   "politi": {
     "kilde": "Midt- og Vestsjællands Politi",
@@ -68,34 +68,9 @@
       "karlslunde",
       "mosede"
     ],
-    "antal_haendelser": 6,
-    "antal_anmeldelser": 3,
+    "antal_haendelser": 4,
+    "antal_anmeldelser": 2,
     "dage": [
-      {
-        "dato": "20. juli 2026",
-        "iso": "2026-07-20",
-        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-20-juli-2026/2026/07/20",
-        "anmeldelser": [
-          {
-            "kategori": "Tyveri fra køretøjer – Varebiler/lastbiler",
-            "sted": "Gersagerparken, Greve (samt et forsøg)"
-          }
-        ],
-        "haendelser": [
-          {
-            "titel": "Hærværk og ulovlig knallertkørsel",
-            "sted": "Lærkehegnet, Greve",
-            "tid": "17.25",
-            "tekst": "Kl 17.25 fik politiet anmeldelse om at to unge fyre kørte rundt på en knallert, der tilsyneladende var tunet så den kunne køre stærkere end tilladt. En beboer i området havde sagt til drengene, at de skulle vise mere hensyn, men det var de tilsyneladende ligeglade med. En patrulje fik fat i to drenge på 14 og 17 år. De havde forsøgt under kørslen at skjule deres udsende ved hjælp af hætter og mundbind og derfor både sigtet for at køre på ulovlig knallert og for at overtræde maskeringsforbuddet. Ydermere er det politiets vurdering, at drengene er de samme som dagen før havde knust en siderude i en parkeret patruljevogn ved Over Bølgen. Drengene blev derfor også sigtet for hærværk."
-          },
-          {
-            "titel": "Syrebomber på boldbane",
-            "sted": "Gersagerparken, Greve",
-            "tid": "18.48",
-            "tekst": "Kl 18.48 blev politiet tilkaldt til boldbanerne, hvor fire drenge skulle kaste med det, der senere viste sig at være syrebomber. Tre drenge på 9, 6 og 15 år truffet i området. Politiet fik en snak med drengene om situationen og sørgede også efterfølgende for at underrette deres familier og de sociale myndigheder."
-          }
-        ]
-      },
       {
         "dato": "22. juli 2026",
         "iso": "2026-07-22",
@@ -156,5 +131,5 @@
       }
     ]
   },
-  "html": "<h2>Ugens gang i Greve Info: Fra mosens morgengry til hjælpsomme naboer</h2>\n\n<p>Hverdagen i Greve har den forgangne uge budt på masser af lokal varme, omsorg og naturskønne øjeblikke. Hvis der er én ting, der virkelig har fyldt i gruppen i denne uge, så er det vores fantastiske nærområder og den helt særlige ro, man finder i de tidlige morgentimer. Samtidig har gruppen endnu en gang vist sit værd som et stærkt netværk, når der skal ydes en ekstra hånd til både to- og firbenede borgere.</p>\n\n<h3>Morgenstund og naturoplevelser i lokalområdet</h3>\n<p>Det tema, der absolut har samlet flest smil og reaktioner i ugen der gik, er de daglige natur-opdateringer fra vores smukke mose og lokale skove. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28701783982755036/\">Jane startede ugen med at dele morgensolen</a> og stilheden i mosen, og hun tog os gennem ugens skiftende sommervejr med en serie herlige beretninger. Vi hørte både om <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28690722940527807/\">blæst og fiskehejrer ved deres gamle redeplads</a>, en helt <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28714403948159706/\">fredelig onsdagsstund</a> og en drillefuld torsdag, hvor <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28726330510300383/\">regnjakken desværre blev glemt på knagen</a>. Sidst på ugen bød mosen på alt fra <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28754372957496138/\">kaffe i selskab med en sommerfugl</a> til et noget nærkontakt-sammenstød, hvor <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28765359149730852/\">en skældud-givende solsort strejfede hendes briller</a>. Det er netop disse jordnære glimt af hverdagsmagi, der minder os om, hvor dejligt et område vi bor i.</p>\n\n<p>Også skoven trak overskrifter, da <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28743901305209970/\">Keld varmt anbefalede en tur i Greve Skov</a>, som han kalder et fantastisk sted for naturoplevelser. I samme boldgade delte <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28730835456516555/\">Joachim et stemningsfuldt sommerbillede</a>, der hurtigt fangede medlemmernes opmærksomhed.</p>\n\n<h3>Stor omtanke for de firbenede</h3>\n<p>Omsorgen for vores kæledyr har også ligget i top i denne uge. Ugens mest populære opslag stod <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/\">Susan for, da hun delte et rørende øjeblik</a> fra Dyrlægerne ved stranden, hvor personalet havde overrasket med en sød hilsen og tegning af hendes hund. Det bragte hurtigt varmen frem i hjerterne hos mange medlemmer.</p>\n\n<p>Kæledyrsfællesskabet viste sig også fra sin mest praktiske side. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28764990723101028/\">Trine rykkede hurtigt ud og fangede en herreløs hund</a> på Hundige Strandvej – og til alles glæde blev ejeren hurtigt fundet. I Mosede efterlyste <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28763116706621763/\">Nina ejeren til en sød og sulten kat</a>, der var flyttet ind i haven. For dem med ferieplaner søgte <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28694472796819488/\">El-khodier efter hundepasning</a>, hvilket afstedkom en lang række gode råd og bud fra naboerne. Og da Keld på en fototur mødte en ung mand med en nervøs hund, tøvede han ikke med at lægge et <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28702235962709838/\">venligt tilbud om hjælp til hundetræning</a> ud i gruppen.</p>\n\n<h3>Nabohjælp og nye ansigter</h3>\n<p>Det er altid berigende at se, hvordan borgerne i Greve passer på hinanden. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28705168209083280/\">David sendte en kæmpe tak</a> til en sød dame, der havde trådt til med trøst og plaster, da hans søn var styrtet på sin cykel – et klassisk eksempel på den gode nabokaliber her i byen.</p>\n\n<p>Endelig fik vi også en præsentation af et nyt lokalt tiltag, da <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/\">Katrine fortalte om sin opstart</a> som privat børnepasser i Greve fra september, hvor hun ser frem til at skabe rammerne for hyggelige hverdage med gåture, sang og leg.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li>Susan: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/\">Læs opslaget</a></li>\n  <li>Keld: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28743901305209970/\">Læs opslaget</a></li>\n  <li>El-khodier: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28694472796819488/\">Læs opslaget</a></li>\n  <li>Katrine: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/\">Læs opslaget</a></li>\n  <li>Jane: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28701783982755036/\">Læs opslaget</a></li>\n  <li>Jane: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28690722940527807/\">Læs opslaget</a></li>\n  <li>Jane: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28714403948159706/\">Læs opslaget</a></li>\n  <li>Jane: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28726330510300383/\">Læs opslaget</a></li>\n  <li>Jane: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28754372957496138/\">Læs opslaget</a></li>\n  <li>David: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28705168209083280/\">Læs opslaget</a></li>\n  <li>Jane: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28765359149730852/\">Læs opslaget</a></li>\n  <li>Nina: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28763116706621763/\">Læs opslaget</a></li>\n  <li>Joachim: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28730835456516555/\">Læs opslaget</a></li>\n  <li>Trine: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28764990723101028/\">Læs opslaget</a></li>\n  <li>Keld: <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28702235962709838/\">Læs opslaget</a></li>\n</ol>"
+  "html": "<h2>Naturglæde, Skovture og Drilsk Sommervejr Fyldte Mosen og Skoven</h2>\n\n<p>Det var uden tvivl den nære lokalnatur og det omskiftelige danske sommervejr, der stjal billedet og sikrede det største engagement i Greve Info i den forgangne uge. Greve-borgerne har i den grad søgt ud i det grønne, hvad enten solen skinnede, eller regnbygerne skyllede ind over stierne. Naturen giver os rum til både fordybelse, små hverdagseventyr og gode lokale anbefalinger, som bragte smilene frem på tværs af byen.</p>\n\n<h3>Grønne stier og nærgående solsorte</h3>\n\n<p>Ugens absolutte topscorer var <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28743901305209970/\">Keld</a>, der delte sin varme anbefaling af at tage en tur i Greve Skov, som han kaldte et fantastisk sted for naturoplevelser. Det udløste en sand bølge af opbakning fra andre lokale, der også nyder skovens dybe stille ro. Men skoven var ikke det eneste grønne trækplaster; mosen har i den grad fået sin egen faste kronikør.</p>\n\n<p>Morgenfriske Jane har nemlig beriget gruppen med adskillige fortællinger fra sine tidlige ture. Hun startede ugen med at nyde de <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28714403948159706/\">stille mosemorgener</a>, men vejrguderne ville det anderledes lidt senere på ugen. Snart måtte hun berette om <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28726330510300383/\">regnjakken der hang derhjemme</a>, mens en ordentlig skylle tog over, og kort efter <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28772378635695570/\">meldte Jane om våde sko</a> og regnvåde bukser efter en blæsevejrsmorgen. Det afskrækkede hende dog ikke. Senere bød morgenturene både på <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28754372957496138/\">en sommerfugl på knæet</a> under kaffepausen og et ret dramatisk møde med lokallivet, da <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28765359149730852/\">en sur solsort</a> fløj så lavt, at dens vinge strejfede hendes brille og gav hende en ordentlig overhøvling på stien.</p>\n\n<h3>Varme hjerter, firbenede venner og lokal nabohjælp</h3>\n\n<p>Omsorgen for hinanden og vores kæledyr har også fyldt utroligt meget i ugen der gik. Der blev vist stor medfølelse og hjælpsomhed rundt omkring i gaderne. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/\">Susan fik sit hjerte varmet</a> efter et besøg hos den lokale dyrlæge ved stranden, hvor personalet havde overdraget en fin lille tegning og hilsen af hendes hund. Også på vejene trådte folk til; <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28705168209083280/\">David sendte en kæmpe tak</a> til en sød dame, der hurtigt var klar med trøst og plaster, da hans søn styrtede på sin cykel.</p>\n\n<p>På kæledyrsfronten har der været travlt med både efterlysninger og lykkelige slutninger. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28763116706621763/\">Nina efterlyste ejeren</a> til en sulten kat i sin have i Mosede, mens <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28769107752689325/\">Liva kunne ånde lettet op</a>, da hendes kat Sofus endelig vendte hjem i god behold efter at have været væk i over en uge. Også en hund på afveje fik hurtig hjælp, da <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28764990723101028/\">Trine tog affære</a> ved Hundige Strandvej og sikrede hunden, indtil ejeren hurtigt blev fundet. Og da Keld på en fototur mødte en nervøs hundeejer i skoven, <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28702235962709838/\">tilbød en hjælpending hånd</a> med tips til hundeglæden.</p>\n\n<h3>Nye børnefællesskaber og god karma</h3>\n\n<p>Der er også nye initiativer på vej til de mindste borgere i kommunen. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/\">Katrine offentliggjorde sin opstart</a> som privat børnepasser fra september, hvor hun ser frem til at skabe en hverdag fyldt med ture, musik, leg i haven og kram for de mindste. Opslaget blev taget imod med mange varme ønsker og kommentarer fra lokalområdet.</p>\n\n<p>Ugen blev rundet af i bedste stil med god karma, da <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28747128668220567/\">Preben ønskede god weekend</a> til alle i gruppen – en enkel, men ugentlig påmindelse om det gode naboskab, der trives i Greve.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li>Keld: Anbefaling af tur i Greve Skov – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28743901305209970/\">Læs opslaget</a></li>\n  <li>Susan: Sød tegning og hilsen fra dyrlægen – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28721217117478389/\">Læs opslaget</a></li>\n  <li>Jane: Våd morgentur og ligeglade fugle – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28772378635695570/\">Læs opslaget</a></li>\n  <li>Katrine: Opstart som privat børnepasser i Greve – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28704890985777669/\">Læs opslaget</a></li>\n  <li>Jane: Onsdag morgen i den stille mose – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28714403948159706/\">Læs opslaget</a></li>\n  <li>Jane: Torsdag morgen med regnbue og glemt regnjakke – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28726330510300383/\">Læs opslaget</a></li>\n  <li>Nina: Efterlysning af ejer til sulten kat i Mosede – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28763116706621763/\">Læs opslaget</a></li>\n  <li>Jane: Morgennydelse og sommerfuglebesøg – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28754372957496138/\">Læs opslaget</a></li>\n  <li>Liva: Katten Sofus er kommet sikkert hjem – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28769107752689325/\">Læs opslaget</a></li>\n  <li>Jane: Dramatisk møde med sur solsort i mosen – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28765359149730852/\">Læs opslaget</a></li>\n  <li>David: Tak for hjælp og trøst til søn efter cykelsturt – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28705168209083280/\">Læs opslaget</a></li>\n  <li>Trine: Fundet hund ved Hundige Strandvej (ejer fundet) – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28764990723101028/\">Læs opslaget</a></li>\n  <li>Keld: Tilbud om hundehjælp efter tur i Greve Skov – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28702235962709838/\">Læs opslaget</a></li>\n  <li>Preben: Rigtig god weekendhilsen til gruppen – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/28747128668220567/\">Læs opslaget</a></li>\n</ol>"
 }
