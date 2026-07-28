@@ -1,15 +1,15 @@
 {
-  "opdateret": "2026-07-27T05:55:55.195Z",
+  "opdateret": "2026-07-28T05:03:21.193Z",
   "udgaver": [
     {
       "id": "2026-W30",
       "aar": 2026,
       "uge": 30,
       "maaned": 7,
-      "dato_fra": "2026-07-20",
-      "dato_til": "2026-07-26",
-      "titel": "Ugens gang i Greve Info: Fra mosens morgengry til hjælpsomme naboer",
-      "antal_opslag": 78,
+      "dato_fra": "2026-07-21",
+      "dato_til": "2026-07-27",
+      "titel": "Naturglæde, Skovture og Drilsk Sommervejr Fyldte Mosen og Skoven",
+      "antal_opslag": 79,
       "fil": "data/uger/2026-W30.json"
     },
     {
