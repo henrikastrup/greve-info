@@ -1,6 +1,17 @@
 {
-  "opdateret": "2026-07-28T05:03:21.193Z",
+  "opdateret": "2026-08-04T05:03:29.557Z",
   "udgaver": [
+    {
+      "id": "2026-W31",
+      "aar": 2026,
+      "uge": 31,
+      "maaned": 7,
+      "dato_fra": "2026-07-28",
+      "dato_til": "2026-08-03",
+      "titel": "Storsind, diamantskær og hverdagens små glimt",
+      "antal_opslag": 100,
+      "fil": "data/uger/2026-W31.json"
+    },
     {
       "id": "2026-W30",
       "aar": 2026,
