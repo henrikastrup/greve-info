@@ -1,6 +1,17 @@
 {
-  "opdateret": "2026-08-04T05:03:29.557Z",
+  "opdateret": "2026-08-11T05:02:53.864Z",
   "udgaver": [
+    {
+      "id": "2026-W32",
+      "aar": 2026,
+      "uge": 32,
+      "maaned": 8,
+      "dato_fra": "2026-08-04",
+      "dato_til": "2026-08-10",
+      "titel": "Firbenede følelser fyldte gruppen: Fortællingen om Elton og en løs hund",
+      "antal_opslag": 97,
+      "fil": "data/uger/2026-W32.json"
+    },
     {
       "id": "2026-W31",
       "aar": 2026,
