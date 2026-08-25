@@ -1,0 +1,205 @@
+{
+  "id": "2026-W34",
+  "aar": 2026,
+  "uge": 34,
+  "maaned": 8,
+  "dato_fra": "2026-08-18",
+  "dato_til": "2026-08-24",
+  "titel": "Trafik og hensyn i hverdagen",
+  "manchet": "97 opslag i gruppen i ugens løb.",
+  "antal_opslag": 97,
+  "kilde": {
+    "navn": "Greve Info",
+    "url": "https://www.facebook.com/groups/1364758780217592"
+  },
+  "top": [
+    {
+      "forfatter": "Linda",
+      "likes": 831,
+      "kommentarer": 141,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/29113371091596321/"
+    },
+    {
+      "forfatter": "Joachim",
+      "likes": 166,
+      "kommentarer": 5,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/29128507480082682/"
+    },
+    {
+      "forfatter": "Janni",
+      "likes": 132,
+      "kommentarer": 8,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/29121697054097058/"
+    },
+    {
+      "forfatter": "Birgitte",
+      "likes": 123,
+      "kommentarer": 14,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/29075062422093855/"
+    },
+    {
+      "forfatter": "Freddy",
+      "likes": 107,
+      "kommentarer": 4,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/29086945030905594/"
+    },
+    {
+      "forfatter": "Brenna",
+      "likes": 81,
+      "kommentarer": 21,
+      "url": "https://www.facebook.com/groups/1364758780217592/permalink/29103272389272858/"
+    }
+  ],
+  "aktivitet": [
+    19,
+    8,
+    25,
+    15,
+    8,
+    12,
+    10
+  ],
+  "politi": {
+    "kilde": "Midt- og Vestsjællands Politi",
+    "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
+    "filter": [
+      "greve",
+      "hundige",
+      "karlslunde",
+      "mosede"
+    ],
+    "antal_haendelser": 8,
+    "antal_anmeldelser": 9,
+    "dage": [
+      {
+        "dato": "18. august 2026",
+        "iso": "2026-08-18",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-18-august-2026/2026/08/18",
+        "anmeldelser": [
+          {
+            "kategori": "Tyveri fra køretøjer – Personbiler",
+            "sted": "Damager Vænge, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Udenlandske butikstyve",
+            "sted": "Over Bølgen, Greve",
+            "tid": "11.22",
+            "tekst": "Kl. 11.22 blev to mænd fra Ukraine tilbageholdt i et supermarked i Waves, hvor de havde stjålet varer for omkring 1000 kr. De to mænd på 25 og 32 år blev tilbageholdt efter kasseområdet, som de gik igennem uden at betale for varerne. En patrulje kørte til stedet hvor de sigtede de to mænd for butikstyveri. Den 32-årige mand havde en kniv på sig, som han ikke havde et anerkendelsværdigt formål til at besidde, så han blev siget for at overtræde knivloven. Han viste sig desuden at være eftersøgt til fogedretten, og patruljen forkyndte for ham, hvornår han skulle møde. Den 25-årige havde ingen gyldige legitimationspapirer på sig, så han blev anholdt og taget med på politistationen indtil hans identitet var fastlagt. De kan begge forvente at høre mere fra politiet i deres sager."
+          }
+        ]
+      },
+      {
+        "dato": "19. august 2026",
+        "iso": "2026-08-19",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-19-august-2026/2026/08/19",
+        "anmeldelser": [
+          {
+            "kategori": "Tyveri fra køretøjer – Varebiler/lastbiler",
+            "sted": "Gersagerparken, Greve"
+          }
+        ],
+        "haendelser": []
+      },
+      {
+        "dato": "20. august 2026",
+        "iso": "2026-08-20",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-20-august-2026/2026/08/20",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i virksomhed/forretninger",
+            "sted": "Havnevej, Greve - flere adresser"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Mand sigtet for rufferi",
+            "sted": "Gersagerparken. Greve",
+            "tid": "17.00",
+            "tekst": "Kl. 17.00 bankede politiet på hos en mand, som de mistænkte for rufferi. Forinden havde politiet skrevet på en sexannonce og lavet en aftale, da de mistænkte at manden lejede et værelse ud i sin lejlighed ulovligt samtidig med at han tog en stor del af kvindens betaling samt husleje. Manden blev derfor sigtet for rufferi, mens kvinden blev henvist til, hvor hun kunne få hjælp."
+          },
+          {
+            "titel": "Drenge taget for butikstyveri",
+            "sted": "Greve Midtby Center, greve",
+            "tid": "18.01",
+            "tekst": "Kl. 18.01 blev politiet kaldt ud til en butik, hvor en butiksdetektiv havde stoppet to drenge på 14 og 15 år. Drengene havde forsøgt at forlade butikken uden at betale for de ting, de havde taget i butikken. Den 15-årige dreng blev sigtet, mens begge drengenes forældre blev underrettet."
+          }
+        ]
+      },
+      {
+        "dato": "21. august 2026",
+        "iso": "2026-08-21",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-21-august-2026/2026/08/21",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i virksomhed/forretninger",
+            "sted": "Metalgangen, Karlslunde"
+          },
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Metavang, Greve"
+          },
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Sydager, Greve"
+          },
+          {
+            "kategori": "Tyveri fra køretøjer – Personbiler",
+            "sted": "Godsvej, Greve"
+          },
+          {
+            "kategori": "Tyveri fra køretøjer – Personbiler",
+            "sted": "Grønnegården, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Brand i rækkehuse",
+            "sted": "Rosenlyparken, Greve",
+            "tid": "07.04",
+            "tekst": "Kl. 07.04 kom et alarmopkald om brand i et rækkehus i Greve. Ilden spredte sig hurtigt og fik fat i naboejendommene. Ilden var startet i køkkenet på det ene rækkehus, hvor beboerne var hjemme. Der skete omfattende skader på tre huse og sodskade på et fjerde Alle personer kom ud, og ingen kom noget til. Brandefterforskere skal nu afklare, om branden kan være startet på grund af en fejl i et el-apparat i køkkenet."
+          },
+          {
+            "titel": "El-knallert forsøgte at køre fra politiet",
+            "sted": "Gersagerparken, Greve",
+            "tid": "14.50",
+            "tekst": "Kl. 14.50 forsøgte føreren af en elektrisk knallert at stikke af fra politiet i Askerød. Knallerter kørte i høj fart af små stisystemer, hvor flere fodgængere på springe til siden for ikke at blive ramt. I et sving i Gersagerparken mistede knallertføreren balancen og væltede. Herefter forsøgte føreren at stikke af til fods, men blev indhentet og anholdt. Føreren viste sig at være en 21-årig mand fra Nørre Alslev, som viste sig at være påvirket af euforiserende stoffer. Han blev taget med til en blodprøveudtagelse, hvorefter han blev løsladt. Knallerten var ikke indregistreret eller forsikret. Den kunne desuden køre væsentligt hurtigere end tilladt, så den blev bragt ind til nærmere undersøgelse."
+          }
+        ]
+      },
+      {
+        "dato": "24. august 2026",
+        "iso": "2026-08-24",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-24-august-2026/2026/08/24",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i virksomhed/forretninger",
+            "sted": "Metalgangen, Karlslunde, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Motorcykel påkørte hus",
+            "sted": "Vestergade, Greve",
+            "tid": "16.48",
+            "tekst": "Kl. 16.48 blev politiet kaldt ud til et færdselsuheld, hvor en motorcyklist havde ramt et hus. Da patruljen ankom til stedet, blev de mødt af en lettere chorkeret 35-årig mand, der forklarede, at han havde ført motorcyklen og var ved et uheld kommet til at sætte farten op og i stedet for at bremse. Manden mistede derfor herresømmet og påkørte siden af huse. Ingen var kommet til skade ved påkørslen."
+          },
+          {
+            "titel": "Bil ramte dreng",
+            "sted": "Lillevangsvej, Greve",
+            "tid": "17.20",
+            "tekst": "Kl. 17.20 var der 112 melding, da en 12-årig dreng var blevet påkørt af en bil. Da politiet kom frem, forklarede bilisten, at han drengen var løbet ud foran bilen, mens den 62-årig mand kom kørende med omkring 30 km/t. Drengen røg op på kølerhjelmen og pådrog sig nogle husafskrabninger. Drengen blev for en sikkerheds skyld kørt på hospitalet med en ambulance for at blive tjekket."
+          },
+          {
+            "titel": "Beruset bilist mistede kørekortet",
+            "sted": "Greve Landevej, Greve",
+            "tid": "22.11",
+            "tekst": "Kl 22.11 standsede politiet en personbil ført af en 32-årig mand fra Roskilde efter at den havde kørt slingrende. En alkometertest viste, at manden var kraftigt beruset. Han blev taget med til udtagning af blodprøve og fik administrativt inddraget sin førerret på stedet."
+          }
+        ]
+      }
+    ]
+  },
+  "html": "<h2>Trafik og hensyn i hverdagen</h2>\n<p>Det emne, der uden sammenligning satte sindene mest i kog i ugens løb, handlede om trafikkultur og hensynet til vores yngste trafikanter. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29113371091596321/\">Linda delte en oplevelse</a> fra fodgængerfeltet ved REMA 1000 i Greve Landsby, hvor en ung cyklist pænt ventede, mens hele seks biler susede forbi uden at stoppe. Opslaget ramte en nerve og høstede over 830 reaktioner og mere end 140 kommentarer fra borgere, der opfordrer til langt større opmærksomhed og hensyn på vejene. På parkeringsfronten efterlyste <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29078203365113094/\">Ovais</a> vidner, efter hans hvide bil desværre blev påkørt og efterladt med skader ved Waves Shoppingcenter.</p>\n\n<h2>Nyt i gruppen og den gode tone</h2>\n<p>Der er også nyt bag kulisserne i vores lokale fællesskab. Gruppens administrator <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29128507480082682/\">Joachim informerede om ændringer</a>, herunder at gruppen vender tilbage til at være privat for bedre at kunne styre medlemstilgangen, samt at der åbnes for anonyme opslag. Samtidig viste <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29103272389272858/\">Brenna</a> flotFormat ved at dele en oprigtig og venlig undskyldning efter en misforståelse i et kommentarfelt – en fin påmindelse om, at en venlig tone gør lokalgruppen rar for alle at være i.</p>\n\n<h2>Børn, familieliv og lokale tilbud</h2>\n<p>For børnefamilierne bød ugen på flere gode initiativer. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29049212461345518/\">Leila gav et spændende indblik</a> i Legeteket i Greve, som er et gratis kommunalt tilbud med masser af materialer og legemiljø for børn i alderen 0-7 år, der har brug for støtte til sprog eller motorik. Samtidig bød <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29065729679693796/\">Sisse</a> ind med ledige pladser i sin private pasningsordning, mens <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29100887226178041/\">Diarra tilbød gratis babyfotografering</a> til interesserede forældre for at opbygge sin nye portfolio.</p>\n\n<h2>Kæledyr og vores fælles omgivelser</h2>\n<p>På dyrefronten var der både lettelse og bekymring. Heldigvis kunne <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29075062422093855/\">Birgitte melde om en lykkelig slutning</a>, da en bortgået kat ved Olsbæk Strandvej fandt trygt hjem igen. Anderledes bekymrende er situationen for <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29053644340902330/\">Zita</a>, der fortsat leder efter sin medicinkrævende kat Muzzi i Karlslunde. I fugleverdenen fik <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29073182302281867/\">Sabine et uventet havebesøg</a> af en bortfløjet papegøje nær Mosedeskolen. Når det gælder vores fælles natur, sendte <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29084863464447084/\">Stig</a> et suk ud over efterladt affald på Hundige Strand og mindede om at benytte de opstillede skraldespande.</p>\n\n<h2>Eftertænksomhed og hverdagens udfordringer</h2>\n<p>Ugen bød også på dybfølte og eftertænksomme stunder. <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29086945030905594/\">Freddy delte en rørende beretning</a> om den fredfyldte skovkirkegård på Greve Kirkegård, hvor hans hustru skal stedes til hvile. Endelig gav <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29121697054097058/\">Janni et tankevækkende opråb</a> vedrørende sagsbehandling og forståelsen for usynlige funktionsnedsættelser i hverdagen.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li>Linda: Oplevelse med manglende hensyn i fodgængerfelt – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29113371091596321/\">Læs opslaget</a></li>\n  <li>Joachim: Vigtige ændringer for gruppens indstillinger – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29128507480082682/\">Læs opslaget</a></li>\n  <li>Janni: Tanker om sagsbehandling og usynlige funktionsnedsættelser – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29121697054097058/\">Læs opslaget</a></li>\n  <li>Birgitte: Efterlysning af kat endte lykkeligt – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29075062422093855/\">Læs opslaget</a></li>\n  <li>Freddy: Ord om den fredfyldte skovkirkegård – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29086945030905594/\">Læs opslaget</a></li>\n  <li>Brenna: En venlig beklagelse om tonen – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29103272389272858/\">Læs opslaget</a></li>\n  <li>Diarra: Tilbud om gratis babyfotografering – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29100887226178041/\">Læs opslaget</a></li>\n  <li>Zita: Efterlysning af katten Muzzi i Karlslunde – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29053644340902330/\">Læs opslaget</a></li>\n  <li>Sisse: Ledige pladser i privat pasningsordning – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29065729679693796/\">Læs opslaget</a></li>\n  <li>Leila: Information om Legeteket i Greve – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29049212461345518/\">Læs opslaget</a></li>\n  <li>Sabine: Observation af bortfløjet papegøje – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29073182302281867/\">Læs opslaget</a></li>\n  <li>Stig: Opfordring til oprydning på Hundige Strand – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29084863464447084/\">Læs opslaget</a></li>\n  <li>Ovais: Efterlysning af vidner til påkørsel ved Waves – <a href=\"https://www.facebook.com/groups/1364758780217592/permalink/29078203365113094/\">Læs opslaget</a></li>\n</ol>"
+}
