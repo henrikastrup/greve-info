@@ -1,6 +1,17 @@
 {
-  "opdateret": "2026-08-25T05:03:33.362Z",
+  "opdateret": "2026-09-01T05:02:27.111Z",
   "udgaver": [
+    {
+      "id": "2026-W35",
+      "aar": 2026,
+      "uge": 35,
+      "maaned": 8,
+      "dato_fra": "2026-08-25",
+      "dato_til": "2026-08-31",
+      "titel": "Stilhed og stemningsbilleder i Greve",
+      "antal_opslag": 1,
+      "fil": "data/uger/2026-W35.json"
+    },
     {
       "id": "2026-W34",
       "aar": 2026,
