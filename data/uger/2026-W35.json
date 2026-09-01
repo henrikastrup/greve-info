@@ -1,0 +1,121 @@
+{
+  "id": "2026-W35",
+  "aar": 2026,
+  "uge": 35,
+  "maaned": 8,
+  "dato_fra": "2026-08-25",
+  "dato_til": "2026-08-31",
+  "titel": "Stilhed og stemningsbilleder i Greve",
+  "manchet": "1 opslag i gruppen i ugens løb.",
+  "antal_opslag": 1,
+  "kilde": {
+    "navn": "Greve Info",
+    "url": "https://www.facebook.com/groups/1364758780217592"
+  },
+  "top": [
+    {
+      "forfatter": "Ukendt",
+      "likes": 0,
+      "kommentarer": 0,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    }
+  ],
+  "aktivitet": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "politi": {
+    "kilde": "Midt- og Vestsjællands Politi",
+    "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
+    "filter": [
+      "greve",
+      "hundige",
+      "karlslunde",
+      "mosede"
+    ],
+    "antal_haendelser": 4,
+    "antal_anmeldelser": 4,
+    "dage": [
+      {
+        "dato": "25. august 2026",
+        "iso": "2026-08-25",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-25-august-2026/2026/08/25",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Krogårdsvej, Greve"
+          }
+        ],
+        "haendelser": []
+      },
+      {
+        "dato": "27. august 2026",
+        "iso": "2026-08-27",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-27-august-2026/2026/08/27",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Krogårdsvej, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Stor færdselskontrol",
+            "sted": "Greve Kommune",
+            "tid": null,
+            "tekst": "Betjente fra færdselsafdelingen gennemførte sammen med et hold studerende fra Politiskolen en større færdselskontrol på Hundigevej, Greve Centervej og Karlslunde Rasteplads på Køge Bugt Motorvejen i Greve. Ved kontrollen blev der i alt registreret 56 overtrædelser. Hele 26 bilister havde ikke medbragt deres kørekort, mens seks blev sigtet for at køre, selvom de ikke havde gyldigt kørekort. Tre bilister kørte, selv om de var frakendt førerretten, og to kørte med en trailer uden at have den nødvendige førerret til kategori BE, som kræves til vogntog over 3500 kg. Kl. 10.13 blev en 23-årig mand fra Lundby standset på Karlslunde Rasteplads, hvor han i en narkometertest blev testet positiv for amfetamin, kokain og hash. I bilen fandt betjentene 1,5 gram amfetamin og 1,74 gram hash. Kl. 11.58 på Hundigevej blev stoppet en varebil med en 32-årig mand fra Køge bag rattet. Han havde en alkoholpromille over det tilladte og var desuden påvirket af euforiserende stoffer. Kl. 13.11 blev en 43-årig kvinde fra Slagelse stoppet på Karlslunde Rasteplads. Det viste sig, at hun kørte bil selvom hendes førerret var inddraget og hun var desuden påvirket af hash.De påvirkede bilister blev anholdt, fik udtaget en blodprøve, hvorefter de blev løsladt. Kontrollen førte herudover til sager om blandt andet manglende brug af sikkerhedssele, manglende sikkerhedsudstyr til et barn under 135 centimeter, overtrædelse af godsloven, manglende forsikring og registrering af en trailer. Sagen om manglende sikkerhedsudstyr til barnet udløser et klip i kørekortet. Der blev også konstateret fejl og mangler på et køretøj samt tre bilejere blev sigtet for at låne deres bil ud til en person uden gyldigt kørekort."
+          }
+        ]
+      },
+      {
+        "dato": "28. august 2026",
+        "iso": "2026-08-28",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-28-august-2026/2026/08/28",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i virksomhed/forretninger",
+            "sted": "Tune Center, Tune, Greve (2 stk)"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Færdselsuheld",
+            "sted": "Køge Bugt Motorvejen, Greve",
+            "tid": "08.36",
+            "tekst": "Kl 08.36 skete der et færdselsuheld med tre biler involveret. Den første bil ville i forbindelse med noget kø-kørsel skifte fra anden til tredje vognbane. En anden bagfrakommende bil måtte derfor undvige og ramte derfor over i en tredje bil. Der skete ingen alvorlig personskade som følge af uheldet."
+          },
+          {
+            "titel": "Distræt chauffør sigtet",
+            "sted": "Køge Bugt Motorvejen, Karslunde, Greve",
+            "tid": "08.45",
+            "tekst": "Kl 08.45 var en motorcykelbetjent fra færdselspolitiet på vej ad motorvejen mod nord, da en varebil blokerede vejen foran ham i 4. vognbane. Chaufføren kørte og talte i håndholdt mobiltelefon og bemærkede derfor slet ikke motorcyklen, der lå bag ham med udrykning over en længere strækning. Chaufføren var en 41-årig mand fra Køge som nu er sigtet for at tale i håndholdt mobiltelefon, hvilket giver et klip i kørekortet."
+          },
+          {
+            "titel": "Sigtet for overtrædelse af tildækningsforbud",
+            "sted": "Over Bølgen, Greve",
+            "tid": "12.14",
+            "tekst": "Kl 12.14 fik politiet anmeldelse om at der gik en person iført niqap rundt i indkøbscenteret. En patrulje fra lokalpolitiet kørte frem og konstaterede, at der var tale om en 59-årig kvinde, der var bosiddende i Storbritannien. Hun var besøg i Danmark og var ikke informeret om reglerne. Hun fjernede straks den uønskede tildækning, da politiet fik forklaret hende de gældende regler. Kvinden blev sigtet efter paragraffen om tildækningsforbud. Med hende var to andre kvinder, der også var tildækkede, men ikke i et omfang, hvor det var imod lovgivningen."
+          }
+        ]
+      },
+      {
+        "dato": "31. august 2026",
+        "iso": "2026-08-31",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-31-august-2026/2026/08/31",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Krogårdsvej, Greve (forsøg)"
+          }
+        ],
+        "haendelser": []
+      }
+    ]
+  },
+  "html": "<h2>Stilhed og stemningsbilleder i Greve</h2>\n<p>Det har været en bemærkelsesværdigt fredelig uge i Greve Info, hvor hverdagens store diskussioner, efterlysninger og vejrmeldinger har taget sig en velfortjent pause. Nogle gange er der bare ikke brug for så mange ord, og det må man sige gjorde sig gældende i denne omgang.</p>\n\n<h3>Billeder uden ord</h3>\n<p>Det, der fangede opmærksomheden i en ellers stille uge, var et opslag fra en <a href=\"https://www.facebook.com/groups/1364758780217592\">lokal medborger</a>, som delte et billede eller en video helt uden ledsagende tekst. Hvad enten det har været et glimt af den lokale natur eller en lille hverdagsbetragtning fra lokalområdet, fik det lov til at stå helt for sig selv uden den store debat.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li>Lokal borger – Stemningsbillede/video delt uden tekst: <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n</ol>"
+}
