@@ -1,6 +1,17 @@
 {
-  "opdateret": "2026-09-01T05:02:27.111Z",
+  "opdateret": "2026-09-08T05:01:16.790Z",
   "udgaver": [
+    {
+      "id": "2026-W36",
+      "aar": 2026,
+      "uge": 36,
+      "maaned": 9,
+      "dato_fra": "2026-09-01",
+      "dato_til": "2026-09-07",
+      "titel": "En usædvanlig stille uge i Greve",
+      "antal_opslag": 1,
+      "fil": "data/uger/2026-W36.json"
+    },
     {
       "id": "2026-W35",
       "aar": 2026,
