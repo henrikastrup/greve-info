@@ -1,0 +1,132 @@
+{
+  "id": "2026-W36",
+  "aar": 2026,
+  "uge": 36,
+  "maaned": 9,
+  "dato_fra": "2026-09-01",
+  "dato_til": "2026-09-07",
+  "titel": "En usædvanlig stille uge i Greve",
+  "manchet": "1 opslag i gruppen i ugens løb.",
+  "antal_opslag": 1,
+  "kilde": {
+    "navn": "Greve Info",
+    "url": "https://www.facebook.com/groups/1364758780217592"
+  },
+  "top": [
+    {
+      "forfatter": "Ukendt",
+      "likes": 0,
+      "kommentarer": 0,
+      "url": "https://www.facebook.com/groups/1364758780217592"
+    }
+  ],
+  "aktivitet": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "politi": {
+    "kilde": "Midt- og Vestsjællands Politi",
+    "kilde_url": "https://politi.dk/doegnrapporter?district=Midt-og-Vestsjaellands-Politi",
+    "filter": [
+      "greve",
+      "hundige",
+      "karlslunde",
+      "mosede"
+    ],
+    "antal_haendelser": 6,
+    "antal_anmeldelser": 4,
+    "dage": [
+      {
+        "dato": "1. september 2026",
+        "iso": "2026-09-01",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-01-september-2026/2026/09/01",
+        "anmeldelser": [],
+        "haendelser": [
+          {
+            "titel": "Påvirket bilist",
+            "sted": "Stationsholmen, Greve",
+            "tid": "00.18",
+            "tekst": "Kl 00.18 tog en politipatrulje kontakt til en personbil ved en tankstation. I bilen var en 50-årig kvinde fra Køge-området. Det viste sig, at kvinden var frakendt retten til at føre bil. Patruljen fik desuden mistanke om, at kvinden var påvirket og en narkometertest viste da også, at hun var påvirket af euforiserende stoffer. Der blev endvidere fundet en lille klump hash i hendes taske."
+          }
+        ]
+      },
+      {
+        "dato": "2. september 2026",
+        "iso": "2026-09-02",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-02-september-2026/2026/09/02",
+        "anmeldelser": [],
+        "haendelser": [
+          {
+            "titel": "Påvirket bilist",
+            "sted": "Motelvej, Karlslunde, Solrød",
+            "tid": "20.34",
+            "tekst": "Kl 20.34 standsede politiet en personbil ført af en 23-årig mand fra København. En narkometertest viste, at manden var påvirket af stoffer. Han erkendte da også, at han havde røget hash et par dage forinden og blev medtaget til udtagning af blodprøve. Politiet ville i den forbindelse inddrage mandens kørekort og erstatte det med et midlertidigt kørekort indtil resultatet af blodprøven foreligger, men den 23-årige havde ikke medbragt sit kørekort og kan derfor også se frem til en sigtelse for det."
+          },
+          {
+            "titel": "Besiddelse af lattergas",
+            "sted": "Krathuset, Greve",
+            "tid": "01.18",
+            "tekst": "Kl 01.18 tog politiet kontakt til en 27-årig mand, der sad i en bil på en parkeringsplads. Det viste sig, at manden sad med to flasker lattergas i skødet og yderligere fire flasker i en kasse i bilen. Han blev derfor sigtet efter loven om besiddelse af lattergas. Manden erkendte. Angående sagen om sprængning ved Rynkevangskolen i Kalundborg i går henvises til udsendt pressemeddelelse. Angående færdselsuheld med dødelig udgang på Øde Hastrup Vej i Roskilde henvises til udsendte Updates."
+          }
+        ]
+      },
+      {
+        "dato": "3. september 2026",
+        "iso": "2026-09-03",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-03-september-2026/2026/09/03",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Rosenvangsvej, Greve"
+          },
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Bækager, Greve"
+          },
+          {
+            "kategori": "Indbrud i skole og institutioner mv.",
+            "sted": "Frydenhøj Alle, Greve"
+          }
+        ],
+        "haendelser": []
+      },
+      {
+        "dato": "7. september 2026",
+        "iso": "2026-09-07",
+        "url": "https://politi.dk/midt-og-vestsjaellands-politi/doegnrapporter/midt-og-vestsjaellands-politi-uddrag-af-doegnrapporten-den-7-september-2026/2026/09/07",
+        "anmeldelser": [
+          {
+            "kategori": "Indbrud i villa/lejlighed/landejendom",
+            "sted": "Strandlyst Alle, Greve"
+          }
+        ],
+        "haendelser": [
+          {
+            "titel": "Færdselskontrol med Politiskolen",
+            "sted": "Greve Kommune",
+            "tid": null,
+            "tekst": "Fredag formiddage gennemførte betjente fra Færdselsafdelingen sammen med studerende og lærere fra Politiskolen en større færdselskontrol på Greve Centervej, Hundigevej og Karlslunde Rasteplads Øst. Kontrollen førte til i alt 21 sager. Tre blev sigtet og anholdt for narkokørsel og en for spirituskørsel. Kl. 09.24 blev en 30-årig mand fra København stoppet på Hundigevej. Han blev testet positiv i en narkometertest, og han havde desuden en smule hash i sin lomme. En 24-årige mand fra Greve blev omkring kl. 12.14 stoppet på Greve Centervej, da han havde et kørselsforbud. Det viste sig desuden, at han var påvirket af hash. Han forsøgte at snyde politiet ved at oplyse sin brors navn, så han blev sigtet for at forsøge at give en anden skylden for at køre narkokørsel. En 43-årig mand fra Lolland blev kl. 12.39 stoppet på Køge Bugt Motorvejen, hvor han kørte selvom han var påvirket. En 72-årig mand fra Greve blev stoppet på Greve Centervej med en alkoholpromille over det tilladte. De blev alle løsladt efter at have fået udtaget en blodprøve. Ti bilister havde ikke medbragt deres kørekort og en kørte uden sele. En person blev sigtet for at køre i frakendelsestiden. En anden blev fundet i besiddelse af en foldekniv, som lå i sidedøren på bilen. Ejeren blev sigtet, da han ikke havde et gyldigt formål til at besidde kniven. En bilejer blev sigtet for at overlade sin bil til en person uden gyldigt kørekort."
+          },
+          {
+            "titel": "Bil ramt af sten på motorvejen",
+            "sted": "Køge Bugt Motorvejen, Greve",
+            "tid": "14.28",
+            "tekst": "Kl. 14.28 kom en personbil ført af en 42-årig kvinde fra Greve kørende på motorvejen. Da bilen kørte under en gangbro, blev bilens forrude ramt af en sten, som føreren af bilen beskrev som på størrelse med en tennisbold. Stenen kom oppefra, men hun så ingen personer på broen. Kvinden kom ikke til skade i forbindelse med stenkastet. Kontakt politiet på telefon 114, hvis du har oplysninger i sagen."
+          },
+          {
+            "titel": "Palletyve sigtet - Karlslunde",
+            "sted": "Greve",
+            "tid": "19.08",
+            "tekst": "Kl. 19.08 blev to mænd på 36 og 49 år, begge fra Herlev, anholdt og sigtet for tyveri af paller, som de var i gang med at aflæsse fra en varevogn. De to mænd er blevet afhørt til sagen og efterfølgende løsladt. Den ene af mændene var i besiddelse af et større kontantbeløb, hvoraf en del blev inddraget, da manden har gæld til det offentlige. De kan forvente at høre yderligere på et senere tidspunkt."
+          }
+        ]
+      }
+    ]
+  },
+  "html": "<h2>En usædvanlig stille uge i Greve</h2>\n<p>Nogle uger summer Greve Info af livlige debatter om vejtræer, bortløbne kæledyr og gode lokale råd, men i denne omgang har der hersket en næsten meditativ ro over nabolaget. Det, der har fyldt mest i denne uge, er i virkeligheden det bemærkelsesværdige fravær af travlhed – Greve-borgerne har tilsyneladende nydt hverdagen ude i virkeligheden frem for bag tasterne.</p>\n\n<h3>Billeder frem for ord</h3>\n<p>Det eneste lille pip i gruppen stod en ukendt nabo for i form af <a href=\"https://www.facebook.com/groups/1364758780217592\">et ordløst opslag</a>, som udelukkende bød på et billede eller en lille video uden ledsagende kommentarer eller forklaring. Opslaget nåede ikke at skabe den store samtale blandt medlemmerne, men står tilbage som ugens enlige, visuelle hilsen.</p>\n<p>Vi satser på, at forårsluften eller den lokale nysgerrighed snart får sat fut i tasterne igen, så vi kan få vendt både stort og småt i Greve i den kommende uge.</p>\n\n<h2>🔗 Links til ugens omtalte opslag</h2>\n<ol>\n  <li>Ukendt – et ordløst opslag med billede eller video: <a href=\"https://www.facebook.com/groups/1364758780217592\">Læs opslaget</a></li>\n</ol>"
+}
